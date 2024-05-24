@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    Except when the prime factors of <code>a, b</code> already co-operate, the iron hand of the <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic" target="_blank">Fundamental Theorem of Arithmetic</a> dictates that the integer powers <code>a**pa</code> and <code>b**pb</code> can never be equal for any two positive integer exponents <code>pa</code> and <code>pb</code>. However, in the jovial spirit of <a href="https://en.wiktionary.org/wiki/close_enough_for_government_work" target="_blank">“close enough for government work”</a>, we define two such powers to “hit” if their difference <code>abs(a**pa-b**pb)</code> multiplied by the <code>tolerance</code> is at most equal to the smaller of those powers. (This definition intentionally avoids division to keep it both fast and accurate for arbitrarily large integers.) For example, <code>tolerance=100</code> expects <code>a**pa</code> and <code>b**pb</code> to be within 1 %. 
+</p>
+<p>
+    For given positive integers <code>a, b</code> return the smallest positive integer exponents <code>(pa, pb)</code> that satisfy the <code>tolerance</code> requirement.
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/4428c00de5124c67aaec033a14af352d/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Three integers <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> <span translate="repeat">Tuple</span> (or list) of two integers <span translate="no">(int)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(hitting_powers(9, 10, 5)) == [1, 1]
+assert list(hitting_powers(2, 4, 100)) == [2, 1]
+assert list(hitting_powers(2, 7, 100)) == [73, 26]
+assert list(hitting_powers(3, 6, 100)) == [137, 84]
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/close-enough">See the task on CheckiO</a></p>

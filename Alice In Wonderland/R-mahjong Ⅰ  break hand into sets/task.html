@@ -1,0 +1,22 @@
+<p>This mission is the beginning of a series of missions dedicated to Japanese game "<a href="https://en.wikipedia.org/wiki/Japanese_mahjong">riichi mahjong</a>". In each subsequent mission, your task will become more difficult.</p>
+<p>The meaning of riichi mahjong is to collect a certain combination of cards by discarding and taking cards. In this it resembles poker, only there are much more cards in it, and the rounds are longer. The cards in this game are called tiles, and each player has 14 of them.</p>
+<p>In riichi, tiles come in five suits. Three of them are digital: man, pin and so; each of the digital suits contains tiles from 1 to 9. The fourth suit is dragons; it includes three types of tiles — a white dragon, a red dragon and a green dragon. The fifth is the wind. As it is easy to guess, it contains four winds according to the names of the cardinal directions. Each tile comes in four copies.</p>
+<p>Now let's agree on the tile designations. The suits of man, pin and so will be abbreviated as "m", "p" and "s", and dragons and winds as "d", "w". Red, white and green dragons will be denoted by "r", "w" and "g". The "north", "south", etc. winds are encrypted in the same way as the cardinal directions. Thus, for example, "6 man" is written as "m6", and "green dragon" is written as "dg".</p>
+<p>The finished hand should, as already mentioned, contain a certain combination of tiles. More precisely, it should contain four sets and a pair. There are two types of sets — chi and pona. Chi is a sequence of three tiles of the same suit in a row, for example: "m123" or "p567". In this case, combinations of the type "m912" are not allowed. Pons are three identical tiles of the same suit, that is, "s999" or "p444". A pair is two identical tiles.</p>
+<p>Example of a hand: 234678 man, 234 pin, 888 so, two south winds. This hand contains four sets (234 pin, 234 man, 678 man chi; 888 so— pont) and a pair (two south winds). This will be encoded as "m2", "m3", "m4", "m6", "m7", "m8", "p2", "p3", "p4", "s8", "s8", "s8", "ws", "ws".</p>
+<p>The goal of the mission is to split this set of tiles ("hand") into sets.</p>
+<p>
+<strong>Input data: </strong> One argument (list type) is strings encoding tiles, in any order.
+</p>
+<p>
+<strong>Output data: </strong> List of strings-sets (sorted).
+</p>
+<p>
+<strong>Example: </strong>
+</p>
+<pre class="brush: python">
+riichi_mahjong_sets(['m2', 's9', 'p9', 'dg', 's3', 's2', 'm1', 's8', 'dg', 'p9', 'dg', 's7', 's1', 'm3']) == ['dggg', 'm123', 'p99', 's123', 's789']
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/r-mahjong-i-break-hand-into-sets">See the task on CheckiO</a></p>

@@ -1,0 +1,112 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    The trick taking power of a bridge hand is estimated with <a href="https://en.wikipedia.org/wiki/Hand_evaluation" target="_blank">Milton Work point count</a>, of which we shall implement a version that is simple enough for beginners of either <b>Python</b> or the game of <b>bridge</b>!  
+</p>
+<p style="text-align: justify;">
+    Looking at a bridge hand that consists of thirteen cards as tuples <span translate="no"><code>(rank, suit)</code></span>:
+</p>
+<ul>
+<li style="text-align: justify;">give it 4 points for each <span translate="no">ace</span>, 3 points for each <span translate="no">king</span>, 2 points for each <span translate="no">queen</span>, and 1 point for each <span translate="no">jack</span>. This <strong>raw point count</strong> is then adjusted with the following rules.</li>
+<li style="text-align: justify;">if the hand contains one 4-cards suit and three 3-cards suits, subtract one point for being <b>flat</b>. (<i>Flat hands rarely play as well as non-flat hands of equal point count.</i>)</li>
+<li style="text-align: justify;">add 1 point for every suit that has 5 cards, 2 points for every suit that has 6 cards, and 3 points for every suit with 7 cards or longer. (<i>Shape is power for the declarer.</i>)</li>
+<li style="text-align: justify;">if the <code>trump</code> is anything other than <code>"notrump"</code>, add 5 points for every <b>void</b> (that is, suit without any cards in it) and 3 points for every <b>singleton</b> (that is, a suit with exactly one card), both of these for any other suit than the <code>trump</code> suit. (<i>Voids and singletons are great when you are playing a suit contract, but very bad in a notrump contract. Being void or a singleton in the trump suit is, of course, extremely bad!</i>)</li>
+</ul>
+<p style="text-align: justify;">
+    Hands are often given in abbreviated form that makes their relevant aspects easier to visualize at a glance. In this abbreviated shorthand form, suits are always listed in the exact order of <b>spades, hearts, diamonds, clubs</b>, so no special symbols are needed to show which suit is which. The ranks in each suit are listed as letters  from <code>"AKQJ"</code> for <b>aces, faces</b> and all <b>spot</b> cards lower than <span translate="no">jack</span> are written out as the same letter <code>"x"</code> to indicate that its exact spot value is irrelevant for the play mechanics of that hand. These letters must be listed in descending order of ranks AKQJx. If some suit is <b>void</b>, that is, the hand contains no cards of that suit, that suit is abbreviated with a minus sign character "-". The shorthand forms for the individual suits are separated using single spaces, with no trailing whitespace. 
+</p>
+<p>
+    Your function must return a number of points and a shorthand form of a given hand.  
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/3e8d8d3170e14e97b58dedd29d285f50/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Two arguments. <span translate="repeat">List</span> of tuples of two strings <span translate="no">(str)</span>. String <span translate="no">(str)</span>. 
+</p>
+<p>
+<strong>Output:</strong> Tuple or list of integer <span translate="no">(int)</span> and string <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(
+    bridge_routine(
+        [
+            (&quot;four&quot;, &quot;spades&quot;),
+            (&quot;five&quot;, &quot;spades&quot;),
+            (&quot;ten&quot;, &quot;hearts&quot;),
+            (&quot;six&quot;, &quot;hearts&quot;),
+            (&quot;queen&quot;, &quot;hearts&quot;),
+            (&quot;jack&quot;, &quot;hearts&quot;),
+            (&quot;four&quot;, &quot;hearts&quot;),
+            (&quot;two&quot;, &quot;hearts&quot;),
+            (&quot;three&quot;, &quot;diamonds&quot;),
+            (&quot;seven&quot;, &quot;diamonds&quot;),
+            (&quot;four&quot;, &quot;diamonds&quot;),
+            (&quot;two&quot;, &quot;diamonds&quot;),
+            (&quot;four&quot;, &quot;clubs&quot;),
+        ],
+        &quot;diamonds&quot;,
+    )
+) == [8, &quot;xx QJxxxx xxxx x&quot;]
+assert list(
+    bridge_routine(
+        [
+            (&quot;three&quot;, &quot;spades&quot;),
+            (&quot;queen&quot;, &quot;hearts&quot;),
+            (&quot;jack&quot;, &quot;hearts&quot;),
+            (&quot;eight&quot;, &quot;hearts&quot;),
+            (&quot;six&quot;, &quot;diamonds&quot;),
+            (&quot;nine&quot;, &quot;diamonds&quot;),
+            (&quot;jack&quot;, &quot;diamonds&quot;),
+            (&quot;ace&quot;, &quot;diamonds&quot;),
+            (&quot;nine&quot;, &quot;clubs&quot;),
+            (&quot;king&quot;, &quot;clubs&quot;),
+            (&quot;jack&quot;, &quot;clubs&quot;),
+            (&quot;five&quot;, &quot;clubs&quot;),
+            (&quot;ace&quot;, &quot;clubs&quot;),
+        ],
+        &quot;clubs&quot;,
+    )
+) == [20, &quot;x QJx AJxx AKJxx&quot;]
+assert list(
+    bridge_routine(
+        [
+            (&quot;three&quot;, &quot;spades&quot;),
+            (&quot;queen&quot;, &quot;hearts&quot;),
+            (&quot;jack&quot;, &quot;hearts&quot;),
+            (&quot;eight&quot;, &quot;hearts&quot;),
+            (&quot;six&quot;, &quot;diamonds&quot;),
+            (&quot;nine&quot;, &quot;diamonds&quot;),
+            (&quot;jack&quot;, &quot;diamonds&quot;),
+            (&quot;ace&quot;, &quot;diamonds&quot;),
+            (&quot;nine&quot;, &quot;clubs&quot;),
+            (&quot;king&quot;, &quot;clubs&quot;),
+            (&quot;jack&quot;, &quot;clubs&quot;),
+            (&quot;five&quot;, &quot;clubs&quot;),
+            (&quot;ace&quot;, &quot;clubs&quot;),
+        ],
+        &quot;spades&quot;,
+    )
+) == [17, &quot;x QJx AJxx AKJxx&quot;]
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/bridge-routine">See the task on CheckiO</a></p>

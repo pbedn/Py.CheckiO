@@ -1,0 +1,45 @@
+<div class="story" style="margin-bottom: 0">
+<div style="text-align: center">
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/e412c7aa5ddb4845a7cfdf394d070c0c/convert/grey/title.png"/>
+</div>
+</div>
+<p>
+    A median is a numerical value separating the upper half of a <strong>sorted</strong> <span translate="repeat">list</span> of numbers from the lower half. In <span translate="repeat">list</span> where there are an odd number of entities, the median is the number found in the middle of the <span translate="repeat">list</span>. If the <span translate="repeat">list</span> contains an even number of entities, then there is no single middle value, instead the median becomes the average of the two numbers found in the middle. For this mission, you are given a non-empty <span translate="repeat">list</span> of integers <span translate="no">(int)</span>. With it, you must separate the upper half of the numbers from the lower half and find the median.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/e412c7aa5ddb4845a7cfdf394d070c0c/median.png" style="max-height: 300px" title="example"/>
+</p>
+<p>
+    If you want to practice more with the similar case, try <a href="https://py.checkio.org/mission/middle-characters/share/0ec0e10f57f485a397fb9a29d9a8c199/" target="_blank">Middle Characters</a> mission.
+</p>
+<p>
+<strong>Input:</strong> <span translate="repeat">List</span> with integers <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> The median as an integer or float <span translate="no">(int | float)</span>.
+</p>
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert checkio([1, 2, 3, 4, 5]) == 3
+assert checkio([3, 1, 2, 5, 3]) == 3
+assert checkio([1, 300, 2, 200, 1]) == 2
+assert checkio([3, 6, 20, 99, 10, 15]) == 12.5
+</pre>
+</div>
+<p class="for_info_only">
+<strong>How it is used:</strong>
+    The median has usage for Statistics and Probability theory, it has especially significant value for skewed distribution. For example: we want to know average wealth of people from a set of data - 100 people earn $100 in month and 10 people earn $1,000,000. If we average it out, we get $91,000. This is weird value and does nothing to show us the real picture. In this case the median would give to us more useful value and a better picture.
+    <a href="http://en.wikipedia.org/wiki/Median" target="_blank">The Article at Wikipedia.</a>
+</p>
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li>1 &lt; len(data) ≤ 1000</li>
+<li>all(0 ≤ x &lt; 10 ** 6 for x in data)</li>
+</ul>
+</p>
+
+<p><a href="https://py.checkio.org/mission/median/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/median">See the task on CheckiO</a></p>

@@ -1,0 +1,25 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Solved
+code: "LETTERS = 'abcdefgh'\r\n\r\n\r\ndef check_left_bottom_pawn(p, pawns):\r\n \
+  \   letter_loc = LETTERS.index(p[0])\r\n    new_letter = LETTERS[letter_loc-1] if\
+  \ letter_loc > 0 else False\r\n    new_index = str(int(p[1]) - 1) if int(p[1]) >\
+  \ 1 else False\r\n    if new_letter and new_index:\r\n        new_pawn = \"{}{}\"\
+  .format(new_letter, new_index)\r\n        return new_pawn in pawns\r\n    return\
+  \ False\r\n\r\n\r\ndef check_right_bottom_pawn(p, pawns):\r\n    letter_loc = LETTERS.index(p[0])\r\
+  \n    new_letter = LETTERS[letter_loc + 1] if letter_loc < 7 else False\r\n    new_index\
+  \ = str(int(p[1]) - 1) if int(p[1]) > 1 else False\r\n    if new_letter and new_index:\r\
+  \n        new_pawn = \"{}{}\".format(new_letter, new_index)\r\n        return new_pawn\
+  \ in pawns\r\n    return False\r\n\r\n\r\ndef safe_pawns(pawns):\r\n    count =\
+  \ 0\r\n    for p in pawns:\r\n        safe1 = check_left_bottom_pawn(p, pawns)\r\
+  \n        safe2 = check_right_bottom_pawn(p, pawns)\r\n        if safe1 or safe2:\r\
+  \n            count += 1\r\n    return count\r\n\r\nif __name__ == '__main__':\r\
+  \n    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+  \n    assert safe_pawns({\"b4\", \"d4\", \"f4\", \"c3\", \"e3\", \"g5\", \"d2\"\
+  }) == 6\r\n    assert safe_pawns({\"b4\", \"c4\", \"d4\", \"e4\", \"f4\", \"g4\"\
+  , \"e5\"}) == 1\r\n    print(\"Coding complete? Click 'Check' to review your tests\
+  \ and earn cool rewards!\")\r\n"
+seconds_from_change: 209705631

@@ -1,0 +1,15 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Solved
+code: "def from_camel_case(name):\n    return name[0].lower() + \"\".join(n if n.islower()\
+  \ else \"_{}\".format(n.lower()) for n in name[1:])\n    \nif __name__ == '__main__':\n\
+  \    print(\"Example:\")\n    print(from_camel_case(\"Name\"))\n\n    #These \"\
+  asserts\" using only for self-checking and not necessary for auto-testing\n    assert\
+  \ from_camel_case(\"MyFunctionName\") == \"my_function_name\"\n    assert from_camel_case(\"\
+  IPhone\") == \"i_phone\"\n    assert from_camel_case(\"ThisFunctionIsEmpty\") ==\
+  \ \"this_function_is_empty\"\n    assert from_camel_case(\"Name\") == \"name\"\n\
+  \    print(\"Coding complete? Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 164185262

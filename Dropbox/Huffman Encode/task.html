@@ -1,0 +1,75 @@
+<!-- Describe task in general -->
+<p>
+Huffman code is a specific type of optimal prefix code that is commonly used for lossless data compression. 
+The algorithm was developed by David A. Huffman while he was a Sc.D. student at MIT and was published in 1952.</p>
+<p>
+The output from Huffman's algorithm can be viewed as a variable-length code table for encoding a source symbol.
+The algorithm derives this table from the estimated probability or frequency of occurrence (weight) for each possible value of the source symbol.
+As in other entropy encoding methods, more common symbols are generally represented using fewer bits than less common symbols.
+</p>
+<p>
+The simplest construction algorithm uses a priority queue, where the node with the lowest frequency is given the highest priority.
+</p>
+<ul>
+<li>Create a leaf node for each symbol and add it to the priority queue.</li>
+<li>While there is more than one node in the queue:</li>
+<ul>
+<li>Remove the two nodes of highest priority (lowest frequency) from the queue.</li>
+<li>Create a new internal node with these two nodes as children and with a frequency equal to the sum of the two nodes' frequencies.</li>
+<li>Add the new node to the queue.</li>
+</ul>
+<li>The remaining node is the root node, and the tree is complete.</li>
+</ul>
+<p>
+It's <b>important to note</b> that for our task, nodes with the same frequency have different priorities. 
+Symbols with lower ASCII code have a higher priority, for example, 'A' has a higher priority than 'B', and 'DZ' has a higher priority than 'E'.
+</p>
+<ul>
+<li>Mark the connections between nodes with 0 and 1 (the connection with the higher priority node with 0, and the other with 1).</li>
+<li>The digits along the way from the root node to the leaf form the code for the leaf's symbol.</li>
+<li>The result for our task is a source string in which all the symbols have been replaced by their codes.</li>
+</ul>
+<p style="text-align: center;">
+<img alt="Huffman_coding_visualisation" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/7b66000b2ca54a3685ee2d7f3e2ae531/Huffman_coding_visualisation.svg" style="max-height: 384px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> String <span translate="no">(str)</span>.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert huffman_encode(&quot;BADABUM&quot;) == &quot;1001110011000111&quot;
+assert (
+    huffman_encode(&quot;A DEAD DAD CEDED A BAD BABE A BEADED ABACA BED&quot;)
+    == &quot;1000011101001000110010011101100111001001000111110010011111011111100010001111110100111001001011111011101000111111001&quot;
+)
+assert (
+    huffman_encode(&quot;no devil lived on&quot;)
+    == &quot;100101111000001110010011111011010110001000111101100&quot;
+)
+assert huffman_encode(&quot;an assassin sins&quot;) == &quot;110111100110001100010111110001011110&quot;
+</pre>
+</div>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<i>Commonly used for lossless data compression.</i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<i>Given string maximum length is 32000. String contains letters and spaces (a-z, A-Z, " ").</i>
+</p>
+<p><i>Idea for the mission was taken from local school challenge for kids.</i></p>
+<p>Screen by Cmglee for <a href="https://commons.wikimedia.org/w/index.php?curid=59931033">wiki.</a></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/huffman-encode">See the task on CheckiO</a></p>

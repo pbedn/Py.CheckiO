@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    Given a string of digits guaranteed to only contain ordinary integer digit characters 0 to 9, create and return the list of increasing integers acquired from reading these digits in order from left to right. The first integer in the result list is made up from the first digit of the string. After that, each element is an integer that consists of as many following consecutive digits as are needed to make that integer <strong>strictly larger</strong> than the previous integer. The leftover digits at the end of the digit string that do not form a sufficiently large integer are ignored. 
+</p>
+<p>
+    This mission is quite easy, but we also have got a harder version - <a href="https://py.checkio.org/en/mission/staircase/" target="_blank">Staircase</a>. Try it!
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/a4d69b826ec744648e408ca9de9f57b6/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> <span translate="repeat">List</span> of integers <span translate="no">(int)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert beat_previous(&quot;600005&quot;) == [6]
+assert beat_previous(&quot;6000050&quot;) == [6, 50]
+assert beat_previous(&quot;045349&quot;) == [0, 4, 5, 34]
+assert beat_previous(&quot;77777777777777777777777&quot;) == [7, 77, 777, 7777, 77777, 777777]
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/beat-the-previous">See the task on CheckiO</a></p>

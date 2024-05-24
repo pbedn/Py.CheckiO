@@ -1,0 +1,69 @@
+<style>
+    .video-container {
+    position: relative;
+    max-width: 560px; /* Maximum width in pixels */
+    margin: 0 auto; /* Center the container horizontally */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/27200d4b59054f6a8156ebb8365d9418/convert/grey/title.png"/>
+<p style="text-align: justify;">
+    Imagine you are at the brick factory making bricks. You have a number of kilns <code>k</code> and a number of storages <code>s</code>. And you want to connect every kiln with every storage with the minimum possible number of tracks intersections. Notice, that it's not necessary for tracks to be straight (<i>scheme 1</i>).
+</p>
+<p style="text-align: justify;">
+    Another variant of this problem is to find the minimum number of intersections while connecting every element with all others in <code>k</code> sequence (<i>scheme 2</i>).
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/27200d4b59054f6a8156ebb8365d9418/brick-factory.svg" style="max-height: 250px" title="example"/>
+</p>
+<p style="text-align: justify;">
+    Your function must return the minimum number of intersections in the variant 1 (two arguments) or variant 2 (one argument), depending of the number of given arguments.
+</p>
+<p style="text-align: justify;">
+    Here is a video with wider explanation of the problems, examples, schemes and formulas 😉. Notice, that the formulas are not fully proven yet and it may be your next own study!
+</p>
+<p class="video-container" style="text-align: center;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/xBfAYxxRsjY?si=jFKCKBc7CUh1cN-k" title="YouTube video player"></iframe>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Two or one integer <span translate="no">(int)</span>
+</p>
+<p>
+<strong>Output:</strong> Integer. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert crosses(1, 1) == 0
+assert crosses(5) == 1
+assert crosses(5, 5) == 16
+assert crosses(7) == 9
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+
+
+<p><a href="https://py.checkio.org/en/mission/the-brick-factory-problem">See the task on CheckiO</a></p>

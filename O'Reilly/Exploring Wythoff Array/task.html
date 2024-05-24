@@ -1,0 +1,49 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+<a href="https://mathworld.wolfram.com/WythoffArray.html" target="_blank">Wythoff array</a> (see also the <a href="https://en.wikipedia.org/wiki/Wythoff_array" target="_blank">Wikipedia article</a> for illustration) is an infinite two-dimensional grid of integers that is seeded with <b>1</b> and <b>2</b> to start off the first row. In each row, each element equals the sum of the previous two elements, so the first row contains precisely the <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence" target="_blank">Fibonacci numbers</a>.  
+</p>
+<p style="text-align: justify;">
+    The first element of each row after the first is <strong>the smallest integer c that does not appear anywhere in the previous rows</strong>. Since every row is strictly ascending and grows exponentially fast, you can find this out by looking at relatively short finite prefixes of these rows. To determine the second element of that row, let <b>a</b> and <b>b</b> be the first two elements of the previous row. If the difference <b>c-a</b> equals <b>2</b>, the second element of that row equals <b>b+3</b>, and otherwise that element equals <b>b+5</b>.
+</p>
+<p style="text-align: justify;">
+    This construction guarantees the Wythoff array to be an <strong>interspersion</strong> of positive integers; every positive integer will appear <strong>exactly once</strong> in the entire infinite grid, with no gaps or duplicates anywhere! (This result also nicely highlights the deeper combinatorial importance of the deceptively simple Fibonacci numbers as potential building blocks of integers and their sequences.)
+</p>
+<p style="text-align: justify;">
+    This function should return the position of <b>n</b> in the Wythoff array as tuple <b>(row, col)</b>, rows and columns both starting from zero.
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/adc9d42ee94e4ab49962d5fb369eedab/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Integer <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> Position as <span translate="repeat">tuple</span> of two integers. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert wythoff_array(21) == (0, 6)
+assert wythoff_array(47) == (1, 5)
+assert wythoff_array(1042) == (8, 8)
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/exploring-wythoff-array">See the task on CheckiO</a></p>

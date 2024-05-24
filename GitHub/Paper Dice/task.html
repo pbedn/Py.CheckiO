@@ -1,0 +1,71 @@
+
+<p>
+This mission is the advanced version of the '<a href="https://py.checkio.org/en/mission/identify-block/">Identify Block</a>' mission.
+</p>
+<p>
+You have to write a code to check the development of drawing a die.
+</p>
+<p>
+The input represents the development of drawing one die.
+It's a list of strings.
+These strings are of the same length. They consist of 1 to 6 digits and a space. 
+These digits represent each side of the die.
+</p>
+<ul>
+<li>If the development is correct, return True.</li>
+<li>If the followng cases, return False:</li>
+<ul>
+<li>You can't complete a cube.</li>
+<li>The sum of the top and bottom sides doesn't always equals 7.
+    </li></ul>
+</ul>
+<p>
+11 nets of a cube. 
+</p>
+<div>
+<p style="text-align: left;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/362b36127bed4d1083c21041babc6b9a/checkio_paper_dice_ex_11nets.png" style="max-height: 276px" title="example"/>
+</p>
+</div>
+<div class="for_info_only">
+<p style="text-align: left;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/362b36127bed4d1083c21041babc6b9a/checkio_paper_dice_example_01.png" style="max-height: 198px" title="example"/>
+</p>
+</div>
+<div class="for_info_only">
+<p><strong>Example:</strong></p>
+<pre class="brush: python">
+paper_dice(['  1  ',
+            ' 235 ',
+            '  6  ',
+            '  4  ']) == True
+
+paper_dice(['    ',
+            '12  ',
+            ' 36 ',
+            '  54',
+            '    ']) == True
+
+paper_dice(['123456']) == False
+paper_dice(['123  ',
+            '  456']) == False</pre>
+</div>
+<p><strong>Input: </strong>A list of strings.</p>
+<p><strong>Output: </strong>The answer as a boolean.</p>
+<p>
+<!--
+<strong>How it is used:</strong><br>
+You will get the basis of nonogram-solver.  The actual nonogaram puzzles consists of multiple rows and also has clue numbers for the columns.
+All nonogram puzzles are designed to be able to identify all cells as 'filled' or 'empty' with these clue numbers.
+-->
+</p>
+<p>
+<strong>Precondition:</strong><br/>
+<ul>
+<li>all(len(row) == len(paper[0]) for row in paper)</li>
+<li>all((cell in '123456 ' for cell in row) for row in paper)</li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/paper-dice">See the task on CheckiO</a></p>

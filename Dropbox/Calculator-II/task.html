@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+<p style="float: left; margin: 10px;">
+<a href="https://www.vecteezy.com/free-vector/calculator"><img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/0fdb64782f244f6fa629c292a6619c80/calc.png" style="max-height: 200px" title="example"/></a>
+</p>
+<p>
+<i>In addition to general purpose calculators, there are those designed for specific markets. For example, there are scientific calculators which include trigonometric and statistical calculations. Some calculators even have the ability to do computer algebra. Graphing calculators can be used to graph functions defined on the real line, or higher-dimensional Euclidean space. <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    In this series of missions you are going to build an elementary calculator.
+</p>
+<p>
+    As an input, you get a sequence of keys pressed, and, as the result of that function, you should show what will be shown on the screen when the last key is pressed. Be attentive, it's not always the result of the expression. Actually, playing with the physical calculator or app will really help you to catch edge cases.
+</p>
+<p>
+    In this mission the combinations of signs are presented.
+</p>
+<p>
+<strong>Expected behavior:</strong>
+<ul>
+<li><i>beginning zeros should be removed, only-zeros number - converted to single zero;</i></li>
+<li><i>among +- signs between numbers, the last one should be taken;</i></li>
+<li><i>"==" means repeating the last operation;</i></li>
+<li><i>"+=" or "-=" - adding/subtracting the number (or operations result) before the combination (doubling the number/subtracting itself).</i></li>
+</ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String.
+</p>
+<p>
+<strong>Output:</strong> String.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert calculator(&quot;3+=&quot;) == &quot;6&quot;
+assert calculator(&quot;3+2==&quot;) == &quot;7&quot;
+assert calculator(&quot;4-1==&quot;) == &quot;2&quot;
+assert calculator(&quot;3+-2=&quot;) == &quot;1&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<i>Calculators are widely used. Understanding the principles of its input and output are interesting and useful.</i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<i>Allowed characters: digits (0-9), signs plus (+), minus (-) or equation (=) and their combinations (+=, +-, == etc.).</i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/calculator-ii">See the task on CheckiO</a></p>

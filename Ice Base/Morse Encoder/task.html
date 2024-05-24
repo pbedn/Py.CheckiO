@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+<p>
+    Your task is to encrypt the text message using the <a href="https://en.wikipedia.org/wiki/Morse_code" target="_blank">Morse code</a>. The input text will consist of letters (in uppercase and lowercase), numbers and white spaces. There won't be any special characters ('&amp;', '?', '#' etc.)<br/>
+    You need to use 3 spaces between words and 1 space between each letter of each word.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/1680d6d1d6fa4df3ba5acba9504a2578/example.jpg" style="max-height: 283px" title="Morse encoder"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> The secret message <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> The same message <span translate="no">(str)</span>, but encrypted.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert morse_encoder(&quot;some text&quot;) == &quot;... --- -- .   - . -..- -&quot;
+assert (
+    morse_encoder(&quot;I was born in 1990&quot;)
+    == &quot;..   .-- .- ...   -... --- .-. -.   .. -.   .---- ----. ----. -----&quot;
+)
+</pre>
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it is used:</strong>
+    For cryptography and spy work.
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Preconditions:</strong>
+<ul>
+<li>0 &lt; len(text) &lt; 50;</li>
+<li>Only English letters (in uppercase and lowercase), numbers and white spaces.</li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/morse-encoder">See the task on CheckiO</a></p>

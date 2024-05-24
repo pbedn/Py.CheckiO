@@ -1,0 +1,27 @@
+<!-- Describe task in general -->
+<p>
+    Given a list of items, some of which may be duplicated, create and return a new Iterable that is otherwise the same as <b class="code">items</b>, but only up to <b class="code">k</b> occurrences of each element are kept, and all occurrences of that element after those first <b class="code">k</b> are discarded. Note also the counterintuitive but still
+    completely legitimate edge case of <b class="code">k == 0</b> that has a well defined answer of an empty list!
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> A list and an integer.
+</p>
+<p>
+<strong>Output:</strong> List or another Iterable (tuple, iterator, generator). 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(remove_after_kth([42, 42, 42, 42, 42, 42, 42], 3)) == [42, 42, 42]
+assert list(remove_after_kth([42, 42, 42, 99, 99, 17], 0)) == []
+assert list(remove_after_kth([1, 1, 1, 2, 2, 2], 5)) == [1, 1, 1, 2, 2, 2]
+</pre>
+<p>
+<i>
+        This task is taken from the course CCPS 109 Computer Science I, as taught by <a href="https://github.com/ikokkari" target="_blank">Ilkka Kokkarinen</a>.
+    </i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/when-k-is-enough">See the task on CheckiO</a></p>

@@ -1,0 +1,60 @@
+<p>
+ You can think about it as simplifying of the first argument "cd" command (a standart bash command). Simplifying means making shorter.
+</p>
+<p>
+ For instance if I do
+ <code>
+  cd a/../b
+ </code>
+ it works the same as
+ <code>
+  cd b
+ </code>
+ . Which means "b" is simplifying of "a/../b". It is much easier to explain everything using examples.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ String. Non-Empty valid unix path.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ String. Unix path.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+# last slash is not important
+simplify_path('/a/') == '/a'
+
+# double slash can be united in one
+simplify_path('/a//b/c') == '/a/b/c'
+
+# double dot - go to previous folder
+simplify_path('dir/fol/../no') == 'dir/no'
+simplify_path('dir/fol/../../no') == 'no'
+
+# one dot means current dir
+simplify_path('/a/b/./ci') == '/a/b/ci'
+simplify_path('vi/..') == '.'
+simplify_path('./.') == '.'
+
+# you can't go deeper than root folder
+simplify_path('/for/../..') == '/'
+simplify_path('/for/../../no/..') == '/'
+
+# not all double-dots can be simplyfied in related path
+simplify_path('for/../..') == '..'
+simplify_path('../foo') == '../foo'
+</pre>
+</div>
+
+
+<p><a href="https://py.checkio.org/en/mission/simplify-unix-path">See the task on CheckiO</a></p>

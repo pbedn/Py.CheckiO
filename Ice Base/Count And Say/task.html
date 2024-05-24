@@ -1,0 +1,51 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    Given a string of digits that is guaranteed to contain only digit characters from <code>0123456789</code>, read that string “out loud” by saying how many times each digit occurs consecutively in the current bunch of digits, and then return the string of digits that you just said out loud.  
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/91f13e4c87b04423aca66c929e6b0204/count-say.svg" style="max-height: 300px" title="example"/>
+</p>
+<p style="text-align: justify;">
+    As silly and straightforward as this <a href="https://en.wikipedia.org/wiki/Look-and-say_sequence" target="_blank">count-and-say sequence</a> problem might initially seem, it required the genius of a mathematician of no lesser caliber than the late great <a href="https://en.wikipedia.org/wiki/John_Horton_Conway" target="_blank">John Conway</a> himself not only to notice the tremendous complexity ready to burst out from just below the surface when this operation is repeatedly iterated to produce an infinite sequence of such digit strings, but also capture that whole mess into a symbolic polynomial equation, as the man himself explains in this video.
+</p>
+<p style="text-align: center;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/ea7lJkEhytA?si=hulVF72WZ_x2f6NH" title="YouTube video player" width="560"></iframe>
+</p>
+<p style="text-align: justify;">
+    You can also check out the related construct of the infinitely long and yet perfectly self-describing <a href="https://en.wikipedia.org/wiki/Kolakoski_sequence" target="_blank">Kolakoski sequence</a> where only the lengths of each consecutive block of digits is written into the result string, not the actual digits.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/91f13e4c87b04423aca66c929e6b0204/2024.jpg" style="max-height: 300px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert count_and_say(&quot;333388822211177&quot;) == &quot;4338323127&quot;
+assert count_and_say(&quot;1&quot;) == &quot;11&quot;
+assert count_and_say(&quot;&quot;) == &quot;&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from Python CCPS 109. It is taught for Ryerson Chang School of Continuing Education by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+<p><a href="https://py.checkio.org/en/mission/count-and-say">See the task on CheckiO</a></p>

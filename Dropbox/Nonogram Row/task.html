@@ -1,0 +1,91 @@
+<p>
+ The '
+ <a href="https://en.wikipedia.org/wiki/Nonogram">
+  nonogaram
+ </a>
+ ' an exceptional mind-sharpening grid puzzle which requires for you to  identify all cells in the grid as 'filled' or 'empty'.
+</p>
+<p>
+ For this mission you are given a row (String) and the number clues (list of Integers), so you will have to work with just one line.
+Each number clue represents the length of filled cells which will appear in that exact order.
+ <br/>
+ If you'll manage to identify more filled or empty cells, reflect them in the input string and return it. If the row and number clues don't match, return None.
+</p>
+<div class="for_info_only">
+ <p style="text-align: left;">
+  <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/013d8912e6974dc1bc8f3e9839b57e39/nonogram_row_example.png" style="max-height: 244px" title="example"/>
+ </p>
+</div>
+<ul>
+ <li>
+  Symbol details:
+ </li>
+ <ul>
+  <li>
+   '?' : unknown cell.
+  </li>
+  <li>
+   'O' : filled cell.
+  </li>
+  <li>
+   'X' : empty cell.
+  </li>
+ </ul>
+</ul>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+nonogram_row('??????????', [8]) == '??OOOOOO??'
+nonogram_row('???O????O?', [3, 1]) == 'X??O??XXOX'
+nonogram_row('????X?X???', [3, 2]) == '?OO?XXX?O?'
+nonogram_row('???X?', [0]) == 'XXXXX'
+nonogram_row('?????', []) == 'XXXXX'
+nonogram_row('??X??', [3]) is None</pre>
+</div>
+<p>
+ <strong>
+  Input:
+ </strong>
+ two arguments, an input row (String), and the number clues (list of Integers)
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ the result row (String) or None
+</p>
+<p>
+ <strong>
+  How it is used:
+ </strong>
+ <br/>
+ The actual nonogaram puzzle consists of multiple rows and also have number clues for the columns. 
+All nonogram puzzles are designed in a way that all of the cells are identified as 'filled' or 'empty' with the help of the given number clues.
+</p>
+<p style="text-align: left;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/013d8912e6974dc1bc8f3e9839b57e39/nonogram3x3_example.png" style="max-height: 160px" title="nonogram_3x3_example"/>
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <br/>
+ <ul>
+  <li>
+   all(r in ('?', 'O', 'X') for r in row_string)
+  </li>
+  <li>
+   all(0 ≤ cn ≤ len(row_string) for cn in clue_numbers)
+  </li>
+  <li>
+   sum(clue_numbers) + len(clue_numbers) - 1 ≤ len(row_string)
+  </li>
+ </ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/nonogram-row">See the task on CheckiO</a></p>

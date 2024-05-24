@@ -1,0 +1,109 @@
+<p>
+ <i>
+  This is the third mission on classical cryptography. In this mission we will encrypt a message using a rotating grille.
+ </i>
+</p>
+<p>
+ Rotating grille cipher is a transposition cipher that uses a special square sheet of cardboard (the
+ <b>
+  grille
+ </b>
+ ) with holes cut in it. 
+    To encrypt a message, sender must place the grille on an empty sheet of paper and write letters of the plaintext into the holes left to right, top to bottom. 
+    After filling all the holes, the grille is rotated 90 degrees clockwise (the holes move to empty spaces) and the process continues. 
+    After the grille was rotated 2 more times, there should be no empty spaces on the paper; if the message is not finished, the algorithm is repeated on the next sheet.
+</p>
+<p>
+ For example, here's what encrypting the line
+ <b>
+  Meet me at twelve PM
+ </b>
+ would look like (we'll use a grille of size 4x4):
+</p>
+<p class="for_info_only" style="text-align: left;">
+ <img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/62c57eb2cd454e44a5138885a3fecb17/encr.png" style="max-height: 200px"/>
+</p>
+<p>
+ After the encryption, the ciphertext reads as
+ <b>
+  tmmveeewepeatlmt
+ </b>
+ .
+</p>
+<p>
+ In this task you are given a message and a key (4x4 square grille); length of the message is divisible by 16. You need to encrypt a message with the rotating grille cipher. 
+    There is a problem, though: some of the keys are defective. 
+    A "correct" key is made in such a way that, when laid over a grid and rotated around, every cell is shown exactly once. 
+    So with defective keys, either some cells are shown more than once, or after applying the key in all four directions there are still unfilled spaces on the sheet. 
+    See examples of bad keys below:
+</p>
+<p class="for_info_only" style="text-align: left;">
+ <img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/62c57eb2cd454e44a5138885a3fecb17/bad.png" style="max-height: 200px"/>
+</p>
+<p>
+ If the key is correct, return encrypted message; if the key is defective - return
+ <b>
+  None.
+ </b>
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ plaintext: str, grille: list of str (positions of holes are marked by
+ <b>
+  "Х"
+ </b>
+ )
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ ciphertext: str or
+ <b>
+  None
+ </b>
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+grille_encrypt('cardangrilletest', ['.X..', '.X..', '...X', 'X...']) == 'actilangeslrdret'
+grille_encrypt('quickbrownfoxjumpsoverthelazydog',
+                ['X...', '...X', '..X.', '.X..']) == 'qxwkbnjufriumcoopyeerldsatoogvhz'
+grille_encrypt('quickbrownfoxjumpsoverthelazydog', 
+                ['.XX.', '.XX.', '..X.', 'X...']) == None
+grille_encrypt('cardangrilletest', ['...X', '....', '....', '....']) == None        
+</pre>
+</div>
+<p>
+ <strong>
+  Preconditions:
+ </strong>
+ len(key) == 4
+ <br/>
+ all(len(l) == 4 for l in key)
+ <br/>
+ len(plaintext) % 16 == 0
+ <br/>
+ all(all(cell == "X" or cell == "." for cell in line) for line in key)
+ <br/>
+</p>
+<p>
+ <b>
+  PS:
+ </b>
+ If you are interested in decryption of a Rotating Grille Cipher, check out mission
+ <a href="https://py.checkio.org/ru/mission/cipher-map2/">
+  Cipher Map
+ </a>
+ .
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/rotating-grille-cipher">See the task on CheckiO</a></p>

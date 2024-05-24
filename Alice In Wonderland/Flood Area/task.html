@@ -1,0 +1,40 @@
+<p>
+Your task is to simulate a flood damage.
+</p>
+<p>
+You are given a cross-section diagram (a string).
+It represents slopes and flatlands by <b class="code">'/'</b>, <b class="code">'\'</b> and <b class="code">'_'</b> respectively. For example, the region of the following picture is shown by a raw string <b class="code">r"/\\///\_/\/\\\\/_/\\///__\\\_\\/_\/_/"</b>. Notice, that single backslash "\" <a href="https://www.w3schools.com/python/gloss_python_escape_characters.asp" target="_blank">escapes</a> following character. So to get backslash just as a character without special functionality, you need to escape every needed backslash string with another one or use raw string. 
+</p>
+<p>
+Assume that the rain is falling endlessly and the water overflowing from the region is falling into the sea from both sides.
+In the following example the rain will create floods in <b class="code">4, 2, 1, 19</b> and <b class="code">9</b> areas respectively.
+</p>
+<p>
+You should return a list or other Iterable (tuple, iterator, generator) of the numbers of floods from the left side of the cross-section diagram.
+If there aren’t any  floods, return <b class="code">[]</b> (or an empty Iterable).
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/fb915d4f01be4da19f63231594e1775a/example_01.png" style="max-height: 300px" title="example"/>
+</p>
+<div class="for_info_only">
+<p><strong>Examples:</strong></p>
+<pre class="brush: python">assert list(flood_area(&quot;\\\\//&quot;)) == [4]
+assert list(flood_area(&quot;_/\\//&quot;)) == [1]
+assert list(flood_area(&quot;\\\\/_&quot;)) == [1]
+assert list(flood_area(&quot;\\\\_\\\\_/_/\\//_&quot;)) == [18]
+</pre>
+</div>
+<p><strong>Input:</strong> A cross-section diagram (a string).</p>
+<p><strong>Output:</strong> The numbers of floods as list or other Iterable (tuple, iterator, generator) of integers.</p>
+<!--
+<p>
+<strong>How it is used:</strong><br>
+</p>
+-->
+<p>
+<strong>Precondition:</strong><i>1 ≤ len(diagram) ≤ 500</i>
+</p>
+<p><i>The mission was taken from <a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_D" target="_blank">AIZU ONLINE JUDGE(ALDS1_3_D: Areas on the Cross-Section Diagram).</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/flood-area">See the task on CheckiO</a></p>

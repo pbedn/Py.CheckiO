@@ -1,0 +1,26 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Solved
+code: "import string\r\nfrom operator import itemgetter\r\nA = string.ascii_lowercase\r\
+  \n\r\n\r\ndef checkio(text):\r\n    if len(text) == 1:\r\n        return text.lower()\r\
+  \n    counter = {}\r\n    single = True\r\n    for l in text.lower():\r\n      \
+  \  if l in A:\r\n            try:\r\n                counter[l] += 1\r\n       \
+  \         single = False\r\n            except KeyError:\r\n                counter[l]\
+  \ = 1\r\n    res = sorted(counter.items(), key=itemgetter(1), reverse=True)\r\n\
+  \    if single:\r\n        x = sorted(res, key=lambda x: ord(x[0]))[0][0]\r\n  \
+  \      return x[0][0].lower()\r\n    rr = res[0]\r\n    tmp = []\r\n    for r in\
+  \ res:\r\n        if r[1] == rr[1]:\r\n            tmp.append(r)\r\n    if len(tmp)\
+  \ > 1:\r\n        x = sorted(tmp, key=lambda x: ord(x[0]))[0][0]\r\n        return\
+  \ x[0][0].lower()\r\n    return res[0][0].lower()\r\n\r\n\r\nif __name__ == '__main__':\r\
+  \n    #These \"asserts\" using only for self-checking and not necessary for auto-testing\r\
+  \n    assert checkio(\"Hello World!\") == \"l\", \"Hello test\"\r\n    assert checkio(\"\
+  How do you do?\") == \"o\", \"O is most wanted\"\r\n    assert checkio(\"One\")\
+  \ == \"e\", \"All letter only once.\"\r\n    assert checkio(\"Oops!\") == \"o\"\
+  , \"Don't forget about lower case.\"\r\n    assert checkio(\"AAaooo!!!!\") == \"\
+  a\", \"Only letters.\"\r\n    assert checkio(\"abe\") == \"a\", \"The First.\"\r\
+  \n    print(\"Start the long test\")\r\n    assert checkio(\"a\" * 9000 + \"b\"\
+  \ * 1000) == \"a\", \"Long.\"\r\n    print(\"The local tests are done.\")\r\n"
+seconds_from_change: 210401660

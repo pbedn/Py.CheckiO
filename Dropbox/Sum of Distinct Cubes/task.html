@@ -1,0 +1,43 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    Positive integers can be broken down into sums of distinct cubes of positive integers, sometimes in multiple different ways. Your function should find and return the descending list of distinct cubes whose sum equals the given positive integer <b>n</b>. If it is impossible to express <b>n</b> as a sum of distinct cubes, return <b>None</b>.
+</p>
+<p>
+    If <b>n</b> allows several breakdowns into sums of distinct cubes, the function must return the lexicographically highest solution that starts with the largest possible first number, followed by the lexicographically highest representation of the rest of the number <b>n-a*a*a</b>. For example, called with <b>n = 1729</b>, this  function should return <b>[12, 1]</b> instead of <b>[10, 9]</b>.  
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/2e8d1475030a417393dffabffcac3c27/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Positive integer <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> <span translate="repeat">List</span> of integers <span translate="no">(int)</span> or <span translate="no">None</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert sum_of_cubes(1729) == [12, 1]
+assert sum_of_cubes(8) == [2]
+assert sum_of_cubes(11) == None
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<ul>
+<li><i>n &gt; 0</i>.</li>
+</ul>
+</p>
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/sum-of-distinct-cubes">See the task on CheckiO</a></p>

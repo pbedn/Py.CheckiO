@@ -1,0 +1,21 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Solved
+code: "def recall_password(cipher_grille, ciphered_password):\n\n    def get_string(grille,\
+  \ password):\n        return \"\".join(password[i][j] for i in range(4) for j in\
+  \ range(4) if grille[i][j] == 'X')\n\n    def reverse_grille(grille):\n        return\
+  \ tuple(\"\".join(grille[j][i] for j in reversed(range(4))) for i in range(4))\n\
+  \n    s = get_string(cipher_grille, ciphered_password)\n    new_grille = reverse_grille(cipher_grille)\n\
+  \    \n    for _ in range(3):\n        s += get_string(new_grille, ciphered_password)\n\
+  \        new_grille = reverse_grille(new_grille)\n    return s\n\n\n\nif __name__\
+  \ == '__main__':\n    #These \"asserts\" using only for self-checking and not necessary\
+  \ for auto-testing\n    assert recall_password(\n        ('X...',\n         '..X.',\n\
+  \         'X..X',\n         '....'),\n        ('itdf',\n         'gdce',\n     \
+  \    'aton',\n         'qrdi')) == 'icantforgetiddqd', 'First example'\n\n    assert\
+  \ recall_password(\n        ('....',\n         'X..X',\n         '.X..',\n     \
+  \    '...X'),\n        ('xhwc',\n         'rsqx',\n         'xqzz',\n         'fyzr'))\
+  \ == 'rxqrwsfzxqxzhczy', 'Second example'\n"
+seconds_from_change: 164586860

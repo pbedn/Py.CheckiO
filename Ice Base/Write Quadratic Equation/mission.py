@@ -1,0 +1,17 @@
+def quadr_equation(data: list[int]) -> str:
+    # your code here
+    return ""
+
+
+print("Example:")
+print(quadr_equation([2, 4, 6]))
+
+# These "asserts" are used for self-checking
+assert quadr_equation([2, 4, 6]) == "2*x**2 - 20*x + 48 = 0"
+assert quadr_equation([-2, 4, 6]) == "-2*x**2 + 20*x - 48 = 0"
+assert quadr_equation([2, 4, -4]) == "2*x**2 - 32 = 0"
+assert quadr_equation([2, 4, 0]) == "2*x**2 - 8*x = 0"
+assert quadr_equation([2, 0]) == "2*x**2 = 0"
+assert quadr_equation([2, 4]) == "2*x**2 - 16*x + 32 = 0"
+
+print("The mission is done! Click 'Check Solution' to earn rewards!")

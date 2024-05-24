@@ -1,0 +1,43 @@
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/8861129a3add4335a19e334d6b637150/convert/grey/title.png"/>
+<p>
+<i>
+        "Sometimes, zeros resemble very tasty donut. And every time we finish a donut, we want another, and then another, and then another..."
+    </i>
+</p>
+<p>
+    You are given <span translate="repeat">list</span> of integers <span translate="no">(int)</span>. Your task in this mission is to duplicate (<b class="code">..., 🍩, ... --&gt; ..., 🍩, 🍩, ...</b>) all zeros (think about donuts ;-P) and return the result as any <span translate="repeat">Iterable</span>. Let's look on the example:
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/8861129a3add4335a19e334d6b637150/duplicate-zeros.svg" style="max-height: 200px" title="example"/>
+</p>
+<p>
+<strong>Input:</strong> <span translate="repeat">List</span> of integers <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> A <span translate="repeat">list</span> on another <span translate="repeat">Iterable</span> (<span translate="repeat">tuple</span>, <span translate="repeat">generator</span>, <span translate="repeat">iterator</span>) of integers <span translate="no">(int)</span>.
+</p>
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(duplicate_zeros([1, 0, 2, 3, 0, 4, 5, 0])) == [
+    1,
+    0,
+    0,
+    2,
+    3,
+    0,
+    0,
+    4,
+    5,
+    0,
+    0,
+]
+assert list(duplicate_zeros([0, 0, 0, 0])) == [0, 0, 0, 0, 0, 0, 0, 0]
+assert list(duplicate_zeros([100, 10, 0, 101, 1000])) == [100, 10, 0, 0, 101, 1000]
+</pre>
+</div>
+<p><i>If you have solved this mission, you can enjoy a 🍩 with peace of mind!=)</i></p>
+
+<p><a href="https://py.checkio.org/mission/duplicate-zeros/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/duplicate-zeros">See the task on CheckiO</a></p>

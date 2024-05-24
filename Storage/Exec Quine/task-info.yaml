@@ -1,0 +1,10 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: |-
+  def quine():
+      return "def quine()\n    return foobar"
+seconds_from_change: 9223372036854775807

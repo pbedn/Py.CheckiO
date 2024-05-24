@@ -1,0 +1,107 @@
+<p>
+ <i>
+  This is the second in a series of missions dedicated to classical cryptography. In this mission we will try to break the Scytale encryption.
+ </i>
+</p>
+<img class="for_info_only half" height="270" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/de76fc31009f44b1a6a0dfec39b0f979/Skytale.png" style="float: left" width="440"/>
+<pclass="for_info_only">
+ Scytale is one of the first known cryptographic devices, used by ancient Greeks, namely Spartans, during their military campaigns.
+It consisted of a cylindrical rod or staff with a long strip of parchment wrapped around it. The sender would simply write the message along the length of the rod and across the winds of a strip until the end of the parchment was reached, then turn the cylinder and continue writing the next line. After unwinding the parchment, the text became unintelligible. 
+To decrypt the message, it would be wrapped around another scytale of the same diameter, after which the plaintext could be read along it.
+ <p>
+  Scytale is a
+  <i>
+   transposition
+  </i>
+  cipher. Unlike substitution ciphers, like Atbash or Caesar's cipher, here the letters of the plaintext remain unchanged, but their order is altered.
+ </p>
+ <p>
+  For example, suppose the message is
+  <b>
+   "let's meet at eleven in the evening"
+  </b>
+  and diameter of the rod allows to write 4 letters in a circle. The scytale with a message written on it would look like this:
+ </p>
+ <p class="for_info_only" style="text-align: left;">
+  <img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/de76fc31009f44b1a6a0dfec39b0f979/ex1.png" style="max-height: 100px">
+  </img>
+ </p>
+ <p>
+  After unwinding the strip the message becomes
+  <b>
+   lteeeanvttaesetnmltieehneveg
+  </b>
+  .
+ </p>
+ <p>
+  If an adversary intercepted a message, they wouldn't be able to read it unless they knew the
+  <i>
+   key
+  </i>
+  to encryption - in this case, the diameter of the cylinder (or, more specifically, number of letters that could be written in a circle around it). However, it could easily be found by trying several rods of different size. Another method (attributed to Aristotle) includes wrapping the parchment with encrypted message around a cone-shaped rod with varying diameter until a fragment of text becomes readable.
+ </p>
+ <p>
+  In this mission we'll try to break a scytale encryption. You have a cryptogram and a
+  <i>
+   crib
+  </i>
+  - a word that is expected to be in the decrypted message. You need to try all the possible keys until you get a plaintext that contains the crib. If after trying every key you either found no such plaintext, or found more than one possible keys - return
+  <b>
+   None
+  </b>
+  .
+ </p>
+ <p>
+  There is also one last piece of informaion: you know that the sender encrypts the messages using the shortest possible strip of parchment, so that there are no empty spaces on it. for example, the message
+  <b>
+   "let's meet at eleven in the evening"
+  </b>
+  , encrypted with key
+  <b>
+   5
+  </b>
+  , will look like this:
+ </p>
+ <p class="for_info_only" style="text-align: left;">
+  <img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/de76fc31009f44b1a6a0dfec39b0f979/ex2.png" style="max-height: 130px"/>
+ </p>
+ <p>
+  Note that the lines have different lengths. The cryptogram will be
+  <b>
+   "leeteetvhntaeeistnenmeivgeln"
+  </b>
+  .
+ </p>
+ <!-- Explain input and output values -->
+ <p>
+  <strong>
+   Input:
+  </strong>
+  ciphertext: str, crib: str
+ </p>
+ <p>
+  <strong>
+   Output:
+  </strong>
+  plaintext: str or
+  <b>
+   None
+  </b>
+ </p>
+ <!-- Give some usage examples -->
+ <div class="for_info_only">
+  <p>
+   <strong>
+    Example:
+   </strong>
+  </p>
+  <pre class="brush: python">
+scytale_decipher('aaaatctwtkdn', 'dawn') == 'attackatdawn'
+scytale_decipher('hdoeerlallrdow', 'world') == 'hellodearworld'
+scytale_decipher('totetshpmeecisendysescwticsriasraytlaegphet', 'sicret') == None     #Crib is not in plaintext
+scytale_decipher('aaaatctwtkdn', 'at') == None                                        #More than one possible decryptions
+</pre>
+ </div>
+</pclass="for_info_only">
+
+<p><a href="https://py.checkio.org/en/mission/scytale-encryption">See the task on CheckiO</a></p>

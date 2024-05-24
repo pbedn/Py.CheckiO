@@ -1,0 +1,69 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/544010aa7727439787f35920b7328ddc/convert/grey/title.png"/>
+<p>
+    Given a string, return all possible <a href="https://en.wikipedia.org/wiki/Permutation" target="_blank">permutations</a> of its characters, sorted alphabetically.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/544010aa7727439787f35920b7328ddc/all-permut.png" style="max-height: 300px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> <span translate="repeat">Iterable</span> of strings <span translate="no">(str)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(string_permutations(&quot;ab&quot;)) == [&quot;ab&quot;, &quot;ba&quot;]
+assert list(string_permutations(&quot;abc&quot;)) == [&quot;abc&quot;, &quot;acb&quot;, &quot;bac&quot;, &quot;bca&quot;, &quot;cab&quot;, &quot;cba&quot;]
+assert list(string_permutations(&quot;a&quot;)) == [&quot;a&quot;]
+assert list(string_permutations(&quot;abcd&quot;)) == [
+    &quot;abcd&quot;,
+    &quot;abdc&quot;,
+    &quot;acbd&quot;,
+    &quot;acdb&quot;,
+    &quot;adbc&quot;,
+    &quot;adcb&quot;,
+    &quot;bacd&quot;,
+    &quot;badc&quot;,
+    &quot;bcad&quot;,
+    &quot;bcda&quot;,
+    &quot;bdac&quot;,
+    &quot;bdca&quot;,
+    &quot;cabd&quot;,
+    &quot;cadb&quot;,
+    &quot;cbad&quot;,
+    &quot;cbda&quot;,
+    &quot;cdab&quot;,
+    &quot;cdba&quot;,
+    &quot;dabc&quot;,
+    &quot;dacb&quot;,
+    &quot;dbac&quot;,
+    &quot;dbca&quot;,
+    &quot;dcab&quot;,
+    &quot;dcba&quot;,
+]
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<ul>
+<li><i>puzzles and games like Scrabble where word combinations matter;</i></li>
+<li><i>cryptography to test possible keys given a set of characters;</i></li>
+<li><i>data analysis in genetics for possible gene combinations.</i></li>
+</ul>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+
+
+<p><a href="https://py.checkio.org/en/mission/all-permutations">See the task on CheckiO</a></p>

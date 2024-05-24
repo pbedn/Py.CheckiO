@@ -1,0 +1,47 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/8ce05a211b2e424796b033352cba8cfe/convert/grey/title.png"/>
+<p style="text-align: justify;">
+    The nodes of the <a href="https://en.wikipedia.org/wiki/Calkin%E2%80%93Wilf_tree" target="_blank">Calkin–Wilf tree</a>, when read in level order so that the elements in each level are read from left to right, produce the linear sequence of all possible positive rational numbers. Almost as if by magic, this construction guarantees every positive integer fraction to appear exactly once in this sequence. Even more delightfully, this construction makes every rational number to make its appearance in its lowest reduced form! 
+</p>
+<p style="text-align: justify;">
+    The tree is rooted at the number 1 (1/1), and any rational number expressed in simplest terms as the fraction a/b has as its two children the numbers a/(a + b) and (a + b)/b.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/8ce05a211b2e424796b033352cba8cfe/calkin-wilf.svg" style="max-height: 200px" title="example"/>
+</p>
+<p style="text-align: justify;">
+    Your function should return the <code>n</code>:th element of this sequence. Notice, that once you reach the position <code>n//2 + 1</code>, the queue already contains the result you need, so you can save a hefty chunk of time and space by not finding any new values. Besides, the linked Wikipedia page and other sources provide additional shortcuts to jump into the given position faster than sloughing your way the hard way there one element at a time.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Integer <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> Two integers. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert calkin_wilf(1) == (1, 1)
+assert calkin_wilf(2) == (1, 2)
+assert calkin_wilf(3) == (2, 1)
+assert calkin_wilf(10) == (3, 5)
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+<p><a href="https://py.checkio.org/en/mission/exploring-calkin-wilf-tree">See the task on CheckiO</a></p>

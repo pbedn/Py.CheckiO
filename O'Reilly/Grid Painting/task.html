@@ -1,0 +1,36 @@
+<!-- Describe task in general -->
+<p>
+    This mission paints designated cells in a 5x5 grid with a brush.
+    And return its minimum number of steps.
+</p>
+<ul>
+<li> Each cell is assigned a letter of the alphabet from A to Y (Row-major order). Use this as input value.</li>
+<li>You can paint vertically (or horizontally) consecutive cells  with any width brush at a time.</li>
+</ul>
+<p>
+<strong>NOTE:</strong>
+<ul>
+<li>Don't paint undesignated cells.</li>
+<li>The cell may be painted multiple times.</li>
+</ul>
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/38397f52dcdf408f83b1d9190e47672a/grid_painting_examples.png" style="max-height: 300px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Designated cells (str).
+</p>
+<p>
+<strong>Output:</strong> Minimum number of steps (int).
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert grid_painting(&quot;ABCFGHMRX&quot;) == 3
+assert grid_painting(&quot;GHLMNRS&quot;) == 2
+assert grid_painting(&quot;GHILNQRS&quot;) == 4
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/grid-painting">See the task on CheckiO</a></p>

@@ -1,0 +1,138 @@
+<p>
+ <i>
+  This is the fifth and final (for now) mission inspired by classical cryptography. In this mission we'll try to break the Playfair cipher using known plaintext attack. To learn more about this cipher, check out
+  <a href="https://py.checkio.org/mission/playfair-cipher/">
+   Playfair Cipher
+  </a>
+  mission.
+ </i>
+</p>
+<p>
+ <em>
+  Playfair Cipher
+ </em>
+ is a manual substitution cipher invented in 1854. Unlike other substitution ciphers that existed at the time, Playfair doesn't encrypt single letters - instead it works with pairs of letters, or
+ <em>
+  bigrams
+ </em>
+ . Let's remind ourselves of the encryption algorithm:
+</p>
+<p>
+ Playfair cipher used a 5x5 key table filled with 25 letters of English alphabet in random order (letter
+ <strong>
+  J
+ </strong>
+ is omitted). Message is broken up into pairs of letters (each pair must consist of two different letters, otherwise letter
+ <strong>
+  X
+ </strong>
+ is inserted between them). Then each bigram is encrypted according to following rules:
+</p>
+<p>
+ 1. If both letters are in the same row of key table, each is replaced by the letter to it's immediate
+ <strong>
+  right
+ </strong>
+ (the last column wraps around to the first);
+</p>
+<p>
+ 2. If the letters appear in the same column - each is replaced with the one
+ <strong>
+  below
+ </strong>
+ it (the bottom row wraps around to the top);
+</p>
+<p>
+ 3. If the letters are at diagonally opposite corners of a rectangle, they are replaced with letters at other two corners. The order is important - the first letter of the encrypted pair is the one that lies on the same
+ <strong>
+  row
+ </strong>
+ as the first letter of the plaintext pair
+</p>
+<p>
+ For example, if the key table is
+</p>
+<pre>
+d f o l s
+e a r m c
+b z h q p
+t g i n x
+k u v y w
+</pre>
+<p>
+ then the word
+ <em>
+  <strong>
+   secret
+  </strong>
+ </em>
+ will be encrypted as
+ <em>
+  <strong>
+   dcembk
+  </strong>
+ </em>
+ .
+ <p>
+  To decrypt the message, we use the same rules (except that if the letters of a bigram lies in the same row or column, we must use the letters to their
+  <strong>
+   left
+  </strong>
+  and
+  <strong>
+   above
+  </strong>
+  respectively).
+ </p>
+ <p>
+  In this mission you will try to break the Playfair Cipher using known plaintext attack. You are given a plaintext and a corresponding cryptogram. The plaintext is already prepared for encryption (J's replaced with I's and X's inserted between double letters), so don't worry about that. You need to find the key table used for encryption and return the codephrase "
+  <em>
+   <strong>
+    topsecretmessage
+   </strong>
+  </em>
+  " encrypted with the same key table.
+ </p>
+ <p>
+  Important note: each input is guaranteed to have a single solution.
+ </p>
+ <p>
+  <strong>
+   Input:
+  </strong>
+  plaintext: str, cryptogram: str
+ </p>
+ <p>
+  <strong>
+   Output:
+  </strong>
+  encrypted codephrase: str
+ </p>
+ <div class="for_info_only">
+  <p>
+   <strong>
+    Example:
+   </strong>
+  </p>
+  <pre class="brush: python">
+playfair_attack('pythonsxstandardlibraryisveryextensiveofferingawiderangeofstuffx',
+                'aiwblarskwphydowzehmhoieksxlixgwvufxlvzqvizxbehdycxlphyxzqkwcvsi') == 'dmhfiulxgbxvqhyx'
+</pre>
+ </div>
+ <p>
+  <strong>
+   Preconditions:
+  </strong>
+  <br/>
+  len(plaintext) == len(cryptogram)
+  <br/>
+  len(plaintext) % 2 == 0
+  <br/>
+  all([l in 'abcdefghiklmnopqrstuvwxyz' for l in plaintext])
+  <br/>
+  all([l in 'abcdefghiklmnopqrstuvwxyz' for l in cryptogram])
+  <br/>
+ </p>
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/playfair-cipher-attack">See the task on CheckiO</a></p>

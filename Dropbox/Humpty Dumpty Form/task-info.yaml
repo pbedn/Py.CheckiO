@@ -1,0 +1,12 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: "def checkio(height, width):\r\n    return [1, 1]\r\n\r\n#These \"asserts\"\
+  \ using only for self-checking and not necessary for auto-testing\r\nif __name__\
+  \ == '__main__':\r\n    assert checkio(4, 2) == [8.38, 21.48], \"Prolate spheroid\"\
+  \r\n    assert checkio(2, 2) == [4.19, 12.57], \"Sphere\"\r\n    assert checkio(2,\
+  \ 4) == [16.76, 34.69], \"Oblate spheroid\""
+seconds_from_change: 9223372036854775807

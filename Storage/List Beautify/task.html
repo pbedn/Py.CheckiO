@@ -1,0 +1,90 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/eb3f709fbc5340f99c00d538859aab9e/convert/grey/title.png"/>
+<p>
+    Let's assume, you are given a list of lists of positive/negative integer/float numbers, for example - <b>[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]</b>. It's always correctly filled: has at least one non-empty inner list.
+</p>
+<p>
+    When you print it as a single object, you receive
+    <table>
+<tr>
+<td>
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/eb3f709fbc5340f99c00d538859aab9e/No.png" style="max-height: 100px" title="example"/>
+</td>
+<td>
+<pre>
+[[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]]
+                </pre>
+</td>
+</tr>
+
+</table>
+    or row by row:
+    <table>
+<tr>
+<td>
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/eb3f709fbc5340f99c00d538859aab9e/No.png" style="max-height: 100px" title="example"/>
+</td>
+<td>
+<pre>
+[1, 2, 10, 150]
+[10, 2, 1000, 2]
+[1, 120, 1, 1000]
+                </pre>
+</td>
+</tr>
+
+</table>
+</p>
+<p>
+    Your function should return something from both views and improved: a <b>single string</b> (multiline if more than one inner list), where numbers in columns should be right-aligned. There must be exactly one whitespace between the longest number in a column incl. minus (if present) and the previous comma in a row. All rows of the same length, wrapped together in the list brackets.
+    <table>
+<tr>
+<td>
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/eb3f709fbc5340f99c00d538859aab9e/Yes.png" style="max-height: 100px" title="example"/>
+</td>
+<td>
+<pre>
+[[ 1,   2,   10,  150],
+ [10,   2, 1000,    2],
+ [ 1, 120,    1, 1000]]
+                </pre>
+</td>
+</tr>
+
+</table>
+</p>
+<p>
+<i>
+        Isn't it beautiful now 😍?
+    </i>
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/eb3f709fbc5340f99c00d538859aab9e/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> List of lists of numbers.
+</p>
+<p>
+<strong>Output:</strong> String. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert (
+    list_beautify([[1, 2, 10, 150], [10, 2, 1000, 2], [1, 120, 1, 1000]])
+    == &quot;[[ 1,   2,   10,  150],\n [10,   2, 1000,    2],\n [ 1, 120,    1, 1000]]&quot;
+)
+assert list_beautify([[1, 10, 100, -1000]]) == &quot;[[1, 10, 100, -1000]]&quot;
+assert (
+    list_beautify([[1, 1, 1, 1, 1], [1, 1, 1, 1, 1], [1, 1, 1, 1, 1]])
+    == &quot;[[1, 1, 1, 1, 1],\n [1, 1, 1, 1, 1],\n [1, 1, 1, 1, 1]]&quot;
+)
+assert (
+    list_beautify([[1, 1, -1, 1, 1], [1, 1, 1, 1, 1], [1, 1, 1, 1, 1]])
+    == &quot;[[1, 1, -1, 1, 1],\n [1, 1,  1, 1, 1],\n [1, 1,  1, 1, 1]]&quot;
+)
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/list-beautify">See the task on CheckiO</a></p>

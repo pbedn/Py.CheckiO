@@ -1,0 +1,35 @@
+<!-- Describe task in general -->
+<p>
+    This task is adapted from following video with Neil Sloane (founder of the <a href="https://oeis.org" target="_blank">On-Line Encyclopedia of Integer Sequences</a>), that you should watch first to learn, how this excellent puzzle works.
+</p>
+<p style="text-align: center">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/IN1fPtY9jYg" title="YouTube video player" width="560"></iframe>
+</p>
+<p>
+    You are given a chessboard of custom dimension: <b class="code">size * size</b>. Your goal is to put there as many ♕ and ♛ as possible with these rules of placement:
+    <ul>
+<li>only equal numbers of Queens are allowed;</li>
+<li>♕ must not attack ♛ and visa verse (but they may be under "attack" of the same color Queens).</li>
+</ul>
+</p>
+<p>
+    Your function should return the maximum number of opposite Queens pairs, you could put on the given chessboard according to the restrictions.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Size of the chessboard as integer.
+</p>
+<p>
+<strong>Output:</strong> Maximum number of opposite Queens pairs as integer. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert peaceable_queens(1) == 0
+assert peaceable_queens(2) == 0
+assert peaceable_queens(3) == 1
+assert peaceable_queens(4) == 2
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/peaceable-queens">See the task on CheckiO</a></p>

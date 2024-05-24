@@ -1,0 +1,29 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: "from typing import List\r\n\r\n\r\ndef find_grille(plaintext: str, cryptogram:\
+  \ str) -> List[str]:\r\n    # your code here\r\n    return []\r\n\r\n\r\nif __name__\
+  \ == \"__main__\":\r\n    print(\"Example:\")\r\n    print(\r\n        find_grille(\r\
+  \n            \"quickbrownfoxjumpsoverthelazydogandjackdawslovesmysphinxofquartz\"\
+  ,\r\n            \"quicpsovkbroerthwnfoelazxjumydogmyspandjhinxackdofquawslartzoves\"\
+  ,\r\n        )\r\n    )\r\n\r\n    # These \"asserts\" are used for self-checking\
+  \ and not for an auto-testing\r\n    assert find_grille(\r\n        \"quickbrownfoxjumpsoverthelazydogandjackdawslovesmysphinxofquartz\"\
+  ,\r\n        \"quicpsovkbroerthwnfoelazxjumydogmyspandjhinxackdofquawslartzoves\"\
+  ,\r\n    ) == [\r\n        \"XXXX....\",\r\n        \"XXXX....\",\r\n        \"\
+  XXXX....\",\r\n        \"XXXX....\",\r\n        \"........\",\r\n        \"........\"\
+  ,\r\n        \"........\",\r\n        \"........\",\r\n    ]\r\n\r\n    assert find_grille(\r\
+  \n        \"weareallfromxanthcubesaidquicklyjustvisitingphazewewontbeforlong\",\r\
+  \n        \"wejhewucuaeswtbrveeoisantsalilbifdteifrqunooigrmplxcakhonnlagtyz\",\r\
+  \n    ) == [\r\n        \"X...X...\",\r\n        \".X.....X\",\r\n        \"..X...X.\"\
+  ,\r\n        \"...X.X..\",\r\n        \"X.....X.\",\r\n        \"...X...X\",\r\n\
+  \        \"..X.X...\",\r\n        \".X...X..\",\r\n    ]\r\n\r\n    assert find_grille(\r\
+  \n        \"theideaofcognitivebiasinpsychologyworksinananalogouswayacognitiv\",\r\
+  \n        \"tgovgeubyhsiawseiinorkdepaswoasifcyncyaanaognconaginihlttoiivloo\",\r\
+  \n    ) == [\r\n        \"X.......\",\r\n        \".X.....X\",\r\n        \"X.....XX\"\
+  ,\r\n        \".X..X...\",\r\n        \"XX......\",\r\n        \"..XXX...\",\r\n\
+  \        \"..X....X\",\r\n        \"...X....\",\r\n    ]\r\n\r\n    print(\"Coding\
+  \ complete? Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

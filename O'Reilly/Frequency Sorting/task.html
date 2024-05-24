@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+<p>
+    Sort the given sequence so that its elements should be grouped and those groups end up in the decreasing frequency order, that is, the number of times element appears in the sequence. If two elements have the same frequency, their groups should end up according to the natural order of elements. For example:
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/bb6b5605421c4a8ca9dbd6fb47f5a66b/freq-sort.svg" style="max-height: 200px" title="example"/>
+</p>
+<p>
+    If you want to practice more with the similar case, try <a href="https://py.checkio.org/mission/sort-array-by-element-frequency/" target="_blank">Sort Array by Element Frequency</a> mission.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> <span translate="repeat">List</span> of integers <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> <span translate="repeat">List</span> or another <span translate="repeat">Iterable</span> (<span translate="repeat">tuple</span>, <span translate="repeat">iterator</span>, <span translate="repeat">generator</span>) of integers <span translate="no">(int)</span>.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(frequency_sorting([1, 2, 3, 4, 5])) == [1, 2, 3, 4, 5]
+assert list(frequency_sorting([3, 4, 11, 13, 11, 4, 4, 7, 3])) == [
+    4,
+    4,
+    4,
+    3,
+    3,
+    11,
+    11,
+    7,
+    13,
+]
+</pre>
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it is used:</strong>
+    For analyzing data using mathematical statistics and mathematical analysis, and for finding trends and predicting future changes (systems, phenomena, etc.).
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><span translate="repeat">list</span> length &lt;= 100;</li>
+<li>max number &lt;= 100.</li>
+</ul>
+</p>
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/frequency-sorting">See the task on CheckiO</a></p>

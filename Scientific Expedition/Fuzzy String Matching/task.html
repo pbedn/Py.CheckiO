@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/cc57401be53c48999bbcf6b8258dfb22/convert/grey/title.png"/>
+<p>
+    Given two strings and a permissible number of character differences, determine if the strings can be considered approximately equal.  
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/cc57401be53c48999bbcf6b8258dfb22/fuzzy-string.png" style="max-height: 200px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Three arguments: two strings <span translate="no">(str)</span> and one integer <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> Logic value <span translate="no">(bool)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert fuzzy_string_match(&quot;apple&quot;, &quot;appel&quot;, 2) == True
+assert fuzzy_string_match(&quot;apple&quot;, &quot;bpple&quot;, 1) == True
+assert fuzzy_string_match(&quot;apple&quot;, &quot;bpple&quot;, 0) == False
+assert fuzzy_string_match(&quot;apple&quot;, &quot;apples&quot;, 1) == True
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<ul>
+<li><i>spell-checking algorithms where slight differences can be ignored;</i></li>
+<li><i>searching algorithms in databases to find entries that closely match the query;</i></li>
+<li><i>DNA sequence matching where certain differences might be allowed.</i></li>
+</ul>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<ul>
+<li><i>0 &lt;= threshold &lt;= max(len(str1), len(str2)).</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/fuzzy-string-matching">See the task on CheckiO</a></p>

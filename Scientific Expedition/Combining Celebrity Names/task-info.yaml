@@ -1,0 +1,22 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: |
+  def brangelina(first: str, second: str) -> str:
+      # your code here
+      return ""
+
+
+  print("Example:")
+  print(brangelina("brad", "angelina"))
+
+  # These "asserts" are used for self-checking
+  assert brangelina("brad", "angelina") == "brangelina"
+  assert brangelina("angelina", "brad") == "angelad"
+  assert brangelina("sheldon", "amy") == "shamy"
+
+  print("The mission is done! Click 'Check Solution' to earn rewards!")
+seconds_from_change: 9223372036854775807

@@ -1,0 +1,46 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/2cdef25fb74146838f47343fbe2ccdf7/convert/grey/title.png"/>
+<p>
+    This function should take a main string and a substring as inputs and return the number of occurrences of the substring within the main string. It should not be case-sensitive and may overlap.  
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/2cdef25fb74146838f47343fbe2ccdf7/count-substr2.svg" style="max-height: 300px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Two strings <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> Integer <span translate="no">(int)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert count_occurrences(&quot;hello world hello&quot;, &quot;hello&quot;) == 2
+assert count_occurrences(&quot;Hello World hello&quot;, &quot;hello&quot;) == 2
+assert count_occurrences(&quot;hello&quot;, &quot;world&quot;) == 0
+assert count_occurrences(&quot;hello world hello world hello&quot;, &quot;world&quot;) == 2
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<ul>
+<li><i>in a word processing software to highlight or replace all occurrences of a particular word or phrase;</i></li>
+<li><i>in website scraping to count the number of times a particular keyword appears;</i></li>
+<li><i>in an analytics application to analyze the frequency of certain words or phrases in a body of text.</i></li>
+</ul>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i>both inputs should be strings: mainStr ∈ string and subStr ∈ string;</i></li>
+<li><i>the main string can have any length, including zero: 0 &lt;= length(mainStr) &lt;= N;</i></li>
+<li><i>the substring should not be an empty string: length(subStr) &gt; 0</i>.</li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/count-substring-occurrences">See the task on CheckiO</a></p>

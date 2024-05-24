@@ -1,0 +1,72 @@
+<p>
+ Learning barcode specifications and implementing a barcode reader with Python.
+</p>
+<p>
+ This time I will use
+ <a href="https://en.wikipedia.org/wiki/International_Article_Number">
+  EAN-13 (from Wikipedia)
+ </a>
+ .
+</p>
+<p>
+ The input is a String of length 95 representing the barcode. Each databit is displayed by an underscore or space. An underscore is the bar area. The input may be reversed. You should decode the barcode so that the output was a String of length 13.
+</p>
+<p>
+ In case a barcode does not conform to the specifications, return None.
+</p>
+<p>
+ The input final digit is the checksum. It is calculated from the other 12 digits, but in this mission it may be wrong. You must return None for this.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+barcode_reader(
+    '_ _   _ __ _  ___ __  __  _  __ ____ _  ___ _ _ _ __  __ __ __  _    _ _ ___  _  ___ _   _  _ _') == '5901234123457'
+
+barcode_reader(
+    '_ _   __ _ _  ___ ____ _   _ __  _ ___  ___ _ _ _ __  __ _  ___ _  ___ _ ___  _  _   _ _    _ _') == '4003994155486'
+</pre>
+ <p style="text-align: left;">
+  <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/439cecc490104fd78fc96995c157b6c0/barcode_example.png" style="max-height: 244px" title="example"/>
+ </p>
+</div>
+<p>
+ <strong>
+  Input:
+ </strong>
+ The image of the barcode is a String of length 95. It consists only of underscores or spaces.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The decoded barcode number is a String of length 13 or None.
+</p>
+<p>
+ <strong>
+  How it is used:
+ </strong>
+ <br/>
+ understand the mechanism of a barcode.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <br/>
+ <ul>
+  <li>
+   len(barcode) == 95
+  </li>
+  <li>
+   all(b in ('_', ' ') for b in barcode)
+  </li>
+ </ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/barcode-reader">See the task on CheckiO</a></p>

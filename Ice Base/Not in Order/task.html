@@ -1,0 +1,22 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    You are given a list of integers. Your function should return the number of elements, which are not at their places as if the list would be sorted ascending. For example, for the sequence <b class="code">[1, 1, 4, 2, 1, 3]</b> the result is <b class="code">3</b>, since elements at indexes 2, 4, 5 (remember about 0-based indexing in Python) are not at their places as in the same sequence sorted ascending - <b class="code">[1, 1, 1, 2, 3, 4]</b>.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> <span translate="repeat">List</span> of integers (<span translate="no">int</span>).
+</p>
+<p>
+<strong>Output:</strong> Integer (<span translate="no">int</span>). 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert not_order([1, 1, 4, 2, 1, 3]) == 3
+assert not_order([]) == 0
+assert not_order([1, 1, 1, 1, 1]) == 0
+assert not_order([1, 2, 3, 4, 5]) == 0
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/not-in-order">See the task on CheckiO</a></p>

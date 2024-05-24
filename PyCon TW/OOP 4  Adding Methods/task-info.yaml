@@ -1,0 +1,10 @@
+type: checkiO
+custom_name: "OOP 4: Adding Methods"
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: |
+  # show me some OOP magic here
+seconds_from_change: 9223372036854775807

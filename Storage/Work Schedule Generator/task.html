@@ -1,0 +1,121 @@
+<!-- Describe task in general -->
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/5fcd2d63a4c240608b32026f298c250f/work-schedule.png" style="max-height: 300px" title="example"/>
+</p>
+<p style="text-align: justify;">
+    You are given a sequence of employees with their work preferences and skills. Also you have business needs as required working time and tasks. Your function should return a schedule, that satisfies business needs with available employees (if it's possible). Now, let's dive into the details.
+</p>
+<p style="text-align: justify;">
+<b>staff</b> is a dictionary, where keys are names of employees and values are  dictionaries as well. Every values dictionary includes three key-value pairs:
+    <ul>
+<li>
+<b>"pref_shifts"</b> - list of strings: shifts, employee wants to work at (may be <b>"first"</b>, <b>"second"</b> or both in this order);
+        </li>
+<li>
+<b>"days_off"</b> - list of strings: days, employee wants to be off (full names of weekdays);
+        </li>
+<li>
+<b>"skills"</b> - list of strings: jobs, employee may do.
+        </li>
+</ul>
+</p>
+<p style="text-align: justify;">
+<b>business_needs</b> is a list of three values: a weekday, for which to make schedule - string; number of shifts to be on this day - integer; tasks, which should be done on this day - list of strings.
+</p>
+<p style="text-align: justify;">
+    Notice about shifts. Each employee may work at first shift, second or both (all day), excluding his/her days off. Number of shifts for business means number of different shifts to be present at this day. For example, if number of shifts <b>3</b>, in may be covered by an employee, who works full day (both his shifts, "first" and "second", total - 2) and any employee more (because every employee has at least one shift), or by three shifts from different employee. Number of shifts should be divided equally between <b>"first"</b> and <b>"second"</b> day shifts. If number of shifts is odd (and not equal 1), <b>"first"</b> day shift must include one shift more, than <b>"second"</b> day shift.    
+</p>
+<p style="text-align: justify;">
+    Skills may be partly/totally the same for different employees. So, when you fill the day shifts, chose employees with less number of skills - they are usually less paid. If the number is the same - chose by name alphabetically. From the point of employees engagement, first day shift has priority: it's more important to have employees with less number of skills there. Tasks is a minimum sequence to be done - the sequence of aggregated skills for this day may be wider. Each task must be done (covered with respective skill) by someone at <b>"first"</b> or <b>"second"</b> dayshift.
+</p>
+<p style="text-align: justify;">
+    Your function should return a list of two lists (day shifts) with alphabetically sorted names of employees, which are going to work at respective day shift. If the number of shifts is <b>1</b> - one of inner lists will be empty. If it's not possible to make schedule - both inner lists should be empty.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Two arguments: a dictionary with employees data, a list with business need description.
+</p>
+<p>
+<strong>Output:</strong> A list of two lists with names as strings. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert schedule_generator(
+    {
+        &quot;Charlie&quot;: {
+            &quot;pref_shifts&quot;: [&quot;first&quot;, &quot;second&quot;],
+            &quot;days_off&quot;: [&quot;Wednesday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;inventory&quot;, &quot;cleaning&quot;, &quot;sales&quot;],
+        },
+        &quot;Alice&quot;: {
+            &quot;pref_shifts&quot;: [&quot;second&quot;],
+            &quot;days_off&quot;: [&quot;Saturday&quot;, &quot;Sunday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;sales&quot;],
+        },
+        &quot;Bob&quot;: {
+            &quot;pref_shifts&quot;: [&quot;first&quot;],
+            &quot;days_off&quot;: [&quot;Monday&quot;, &quot;Tuesday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;inventory&quot;],
+        },
+    },
+    [&quot;Monday&quot;, 1, [&quot;customer service&quot;, &quot;sales&quot;]],
+) == [[], [&quot;Alice&quot;]]
+assert schedule_generator(
+    {
+        &quot;Charlie&quot;: {
+            &quot;pref_shifts&quot;: [&quot;first&quot;, &quot;second&quot;],
+            &quot;days_off&quot;: [&quot;Wednesday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;inventory&quot;, &quot;cleaning&quot;, &quot;sales&quot;],
+        },
+        &quot;Alice&quot;: {
+            &quot;pref_shifts&quot;: [&quot;second&quot;],
+            &quot;days_off&quot;: [&quot;Saturday&quot;, &quot;Sunday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;sales&quot;],
+        },
+        &quot;Bob&quot;: {
+            &quot;pref_shifts&quot;: [&quot;first&quot;],
+            &quot;days_off&quot;: [&quot;Monday&quot;, &quot;Tuesday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;inventory&quot;],
+        },
+    },
+    [&quot;Monday&quot;, 2, [&quot;customer service&quot;, &quot;sales&quot;]],
+) == [[&quot;Charlie&quot;], [&quot;Alice&quot;]]
+assert schedule_generator(
+    {
+        &quot;Charlie&quot;: {
+            &quot;pref_shifts&quot;: [&quot;first&quot;, &quot;second&quot;],
+            &quot;days_off&quot;: [&quot;Wednesday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;inventory&quot;, &quot;cleaning&quot;, &quot;sales&quot;],
+        },
+        &quot;Alice&quot;: {
+            &quot;pref_shifts&quot;: [&quot;second&quot;],
+            &quot;days_off&quot;: [&quot;Saturday&quot;, &quot;Sunday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;sales&quot;],
+        },
+        &quot;Bob&quot;: {
+            &quot;pref_shifts&quot;: [&quot;first&quot;],
+            &quot;days_off&quot;: [&quot;Monday&quot;, &quot;Tuesday&quot;],
+            &quot;skills&quot;: [&quot;customer service&quot;, &quot;inventory&quot;],
+        },
+    },
+    [&quot;Wednesday&quot;, 1, [&quot;customer service&quot;, &quot;sales&quot;, &quot;inventory&quot;]],
+) == [[], []]
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+    <strong>How it’s used:</strong>
+    <i>Schedule optimizing is a usual thing.</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+
+
+<p><a href="https://py.checkio.org/en/mission/work-schedule-generator">See the task on CheckiO</a></p>

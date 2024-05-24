@@ -1,0 +1,95 @@
+<p>
+ Do you remember the classic mission
+ <a href="http://www.checkio.org/mission/open-labyrinth/share/574bd1ded68c9705c5d6f07c6206be12/">
+  Open Labyrinth
+ </a>
+ ?
+    Well, you once again find yourself inside a labyrinth, but the lights are out and you cannot see
+    the full map. You have flashlight and know that all passages in the Labyrinth are directed along
+    South-North and East-West lines. You don't yet know your position or the location of the exit.
+    You must hurry as you cannot run forever.
+</p>
+<p>
+ This is a "multicall" mission and as such, your function will be called until you have solved
+    the maze or run out of moves. For each iteration you see a part of the labyrinth in four
+    directions (function input). You can see passages and where they have crossings and turns. If
+    it’s in your range of vision, you’ll see the exit too. The visible zones are represented as a
+    grid as a tuple of strings, where
+ <strong>
+  "X" is a wall, "." is a passage cell, "?" is unknown, "P" is player and "E" is the exit.
+ </strong>
+ Grids are represented as 2D rectangular arrays. The size is related
+    to size of the visible zone.
+</p>
+<p>
+ For each iteration your function should return one or several actions as a string with
+    directions. Actions are described as directions: "N" - North, "S" - South, "W" - West and "E" -
+    East. For example: the string "NWS" describes a sequence of three moves. The walls are coated in
+    a weird slime so you shouldn’t make a move that would have you walk into a wall. To make things
+    interesting, you are limited to 250 moves (not iterations). You can use global variables between
+    iterations.
+</p>
+<p style="text-align: center;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/48441b64b2e14fcc932f4cda304747ec/example.svg" title="example"/>
+</p>
+<p>
+ For example on the image you can see the full labyrinth and that will be visible for player.
+    And your function will receive:
+</p>
+<pre>
+("???XXX",
+ "???...",
+ "???X.X",
+ "XXXX.X",
+ "X...PX",
+ "XXXX.X",
+ "???X.X",
+ "???...",
+ "???X.X",
+ "???X.X",
+ "???..X",
+ "???XXX")
+</pre>
+<p>
+ <strong>
+  Input:
+ </strong>
+ A visible part as a tuple of strings.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ An action or several actions as a string.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+    </pre>
+</div>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ This concept is pathfinding algorithm with search. It can be used to explore territory and make
+    a map.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <br/>
+ The labyrinth are surrounded by walls.
+ <br/>
+ All passages are narrow (1 cell width)
+ <br/>
+ 3 &lt; len(visible) ≤ 15
+ <br/>
+ all(len(row) == len(visible[0]) for row in visible)
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/dark-labyrinth">See the task on CheckiO</a></p>

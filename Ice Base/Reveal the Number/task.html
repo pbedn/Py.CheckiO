@@ -1,0 +1,32 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/2fd36f7bf94241e9bdbaa9c15a63b1c3/convert/grey/title.png"/>
+
+https://youtu.be/hSlffi7fMO8
+<p style="text-align: justify;">
+    You are given a string of different characters (letters, digits and other symbols). The goal is to "extract" the number from the string: concatenate only digits, number sign and "." (if present) and return the result in number format. If no number can be extracted (no digits in the given string) - return <b class="code"></b>None.
+</p>
+<p>
+<strong>Expected behavior:</strong>
+<ul>
+<li><i>take into consideration the LAST number sign before the FIRST digit;</i></li>
+<li><i>take into consideration the FIRST dot in the string (It's guaranteed, that it goes after at least one digit or has at least one digit after). If there is a dot, return as float, otherwise - integer.</i></li>
+</ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> Integer <span translate="no">(int)</span>, float <span translate="no">(float)</span> or <span translate="no">None</span>.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert reveal_num(&quot;F0(t}&quot;) == 0
+assert reveal_num(&quot;Utc&amp;g&quot;) == None
+assert reveal_num(&quot;-aB%|_-+2ADS.12+3.ADS1.2&quot;) == 2.12312
+assert reveal_num(&quot;-aB%|_+-2ADS.12+3.ADS1.2&quot;) == -2.12312
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/reveal-the-number">See the task on CheckiO</a></p>

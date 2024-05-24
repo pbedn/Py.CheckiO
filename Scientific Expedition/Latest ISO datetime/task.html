@@ -1,0 +1,36 @@
+<!-- Describe task in general -->
+<p>
+    In this task, you need to return the later datetime string between the given two.
+</p>
+<!--<p style="text-align: center;">-->
+<!--    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/f24ceea4ad7d4ef384839b41fdfc2b81/example.png" alt="example" style="max-height: 83px"/>-->
+<!--</p>-->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Two strings.
+</p>
+<p>
+<strong>Output:</strong> String.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert get_latest(&quot;2007-03-04T21:08:12&quot;, &quot;2007-03-04T21:08:12&quot;) == &quot;2007-03-04T21:08:12&quot;
+assert get_latest(&quot;2027-09-01T01:03:10&quot;, &quot;1997-04-15T11:18:14&quot;) == &quot;2027-09-01T01:03:10&quot;
+assert get_latest(&quot;0001-01-01T01:01:01&quot;, &quot;3000-11-16T13:27:02&quot;) == &quot;3000-11-16T13:27:02&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<i>For sequential data arrangement, when working with time series.</i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<i>Datetime arguments &gt;= 0001-01-01T01:01:01</i>.
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/latest-iso-datetime">See the task on CheckiO</a></p>

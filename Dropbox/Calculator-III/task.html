@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+<p style="float: left; margin: 10px;">
+<a href="https://www.vecteezy.com/free-vector/calculator"><img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/3dab03229ae64eb0a1ca7f3c4f93d77e/calc.png" style="max-height: 200px" title="example"/></a>
+</p>
+<p>
+<i>The fundamental difference between a calculator and computer is that a computer can be programmed in a way that allows the program to take different branches according to intermediate results, while calculators are pre-designed with specific functions built in. The distinction is not clear-cut: some devices classed as programmable calculators have programming functions, sometimes with support for programming languages <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    In this series of missions you are going to build an elementary calculator.
+</p>
+<p>
+    As an input, you get a sequence of keys pressed, and, as the result of that function, you should show what will be shown on the screen when the last key is pressed. Be attentive, it's not always the result of the expression. Actually, playing with the physical calculator or app will really helps you to catch edge cases.
+</p>
+<p>
+    Max digit space of 5 is added. It means that the maximum number you can enter is "99999".
+</p>
+<p>
+<strong>Expected behavior:</strong>
+<ul>
+<li><i>beginning zeros should be removed, only-zeros number - converted to single zero;</i></li>
+<li><i>among +- signs between numbers, the last one should be taken;</i></li>
+<li><i>"==" means repeating the last operation;</i></li>
+<li><i>"+=" or "-=" - adding/subtracting the number (or operations result) before the combination (doubling the number/subtracting itself);</i></li>
+<li><i>the calculator ignores digit you enter after 5th;</i></li>
+<li><i>"-" for numbers &lt; 0 is NOT taking digit place;</i></li>
+<li><i>if the abs(result) is more than 99999 - "error" is shown as a result.</i></li>
+</ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String.
+</p>
+<p>
+<strong>Output:</strong> String.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert calculator(&quot;90000+10000=&quot;) == &quot;error&quot;
+assert calculator(&quot;90000+10000-10000=&quot;) == &quot;error&quot;
+assert calculator(&quot;90000+10000-10000&quot;) == &quot;10000&quot;
+assert calculator(&quot;123456789&quot;) == &quot;12345&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<i>Calculators are widely used. Understanding the principles of its input and output are interesting and useful.</i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<i>Allowed characters: digits (0-9), signs plus (+), minus (-) or equation (=) and their combinations (+=, +-, == etc.). The number may contain no more than 5 digits.</i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/calculator-iii">See the task on CheckiO</a></p>

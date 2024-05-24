@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/2a485c5b4085426b8e0d17a0d0e431f9/convert/grey/title.png"/>
+<p>
+    This function should take a date string in the format <b>dd/mm/yyyy</b> and convert it to the format <b>yyyy-mm-dd</b>. If the input is not in the correct format, the function should return an error message <b>"Error: Invalid date."</b>.  
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/2a485c5b4085426b8e0d17a0d0e431f9/convert-date2.svg" style="max-height: 200px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> String <span translate="no">(str)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert convert_date(&quot;25/12/2021&quot;) == &quot;2021-12-25&quot;
+assert convert_date(&quot;01/01/2000&quot;) == &quot;2000-01-01&quot;
+assert convert_date(&quot;15/06/1995&quot;) == &quot;1995-06-15&quot;
+assert convert_date(&quot;29/02/2020&quot;) == &quot;2020-02-29&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<ul>
+<li><i>in databases, while migrating data from one system to another with different date format requirements;</i></li>
+<li><i>in date picker UI components, where user input might be in a different format;</i></li>
+<li><i>in reporting tools to standardize date formats across different data sources.</i></li>
+</ul>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i>the input should be a string: date ∈ string.</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/convert-date">See the task on CheckiO</a></p>

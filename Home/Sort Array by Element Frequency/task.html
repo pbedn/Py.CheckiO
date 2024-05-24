@@ -1,0 +1,59 @@
+<!-- Describe task in general -->
+<p>
+    Sort the given list so that its
+    elements should be grouped and those groups end up in the decreasing frequency order, that is, the number of
+    times element appears in list. If two elements have the same frequency, their groups
+    should end up in the same order as the first appearance of element in the list.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/267b775d093b48f39a8a9ee343e7655a/freq-sort3.svg" style="max-height: 200px" title="example"/>
+</p>
+<p>
+    If you want to practice more with the similar case, try
+    <a href="https://py.checkio.org/mission/frequency-sorting" target="_blank">Frequency Sorting</a> mission.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> List
+</p>
+<p>
+<strong>Output:</strong> List or another Iterable (tuple, iterator, generator)
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert list(frequency_sort([4, 6, 2, 2, 6, 4, 4, 4])) == [4, 4, 4, 4, 6, 6, 2, 2]
+assert list(frequency_sort([4, 6, 2, 2, 2, 6, 4, 4, 4])) == [4, 4, 4, 4, 2, 2, 2, 6, 6]
+assert list(frequency_sort([&quot;bob&quot;, &quot;bob&quot;, &quot;carl&quot;, &quot;alex&quot;, &quot;bob&quot;])) == [
+    &quot;bob&quot;,
+    &quot;bob&quot;,
+    &quot;bob&quot;,
+    &quot;carl&quot;,
+    &quot;alex&quot;,
+]
+assert list(frequency_sort([17, 99, 42])) == [17, 99, 42]
+</pre>
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it is used:</strong>
+    For analyzing data using mathematical statistics and mathematical analysis, and for finding trends and predicting future changes (systems, phenomena, etc.)
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<ul>
+<li>elements can be ints or strings</li>
+</ul>
+</p>
+<p>
+<i>The mission was taken from Python CCPS 109 Fall 2018. It's being taught for
+    Ryerson Chang School of Continuing Education by <a href="http://www.scs.ryerson.ca/~ikokkari/">Ilkka Kokkarinen</a></i>
+</p>
+
+<p><a href="https://py.checkio.org/mission/sort-array-by-element-frequency/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/sort-array-by-element-frequency">See the task on CheckiO</a></p>

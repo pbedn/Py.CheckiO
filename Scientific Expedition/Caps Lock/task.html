@@ -1,0 +1,26 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    Joe Palooka has fat fingers, so he always hits the “Caps Lock” key whenever he actually intends to hit the key “a” by itself. (When Joe tries to type in some accented version of “a” that needs more keystrokes to conjure the accents, he is more careful in the presence of such sophisticated characters ([Shift] + [a]) and will press the keys correctly.) Compute and return the result of having Joe type in the given text. The “Caps Lock” key affects only the letter keys “a” and “z”, and has no effect on the other keys or characters. The “Caps Lock” key is assumed to be initially off.
+</p>
+<p><i>For Joe's keyboard, Caps Lock always uppercases a letter. That means if Caps Lock is on, and Joe does Shift + b, 'B' (in upper case) gets printed.</i></p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> A string (<span translate="no">str</span>). The typed text.
+</p>
+<p>
+<strong>Output:</strong> A string (<span translate="no">str</span>). The resulting text after being typed.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert caps_lock(&quot;Why are you asking me that?&quot;) == &quot;Why RE YOU sking me thT?&quot;
+assert caps_lock(&quot;Always wanted to visit Zambia.&quot;) == &quot;AlwYS Wnted to visit ZMBI.&quot;
+assert caps_lock(&quot;Aloha from Hawaii&quot;) == &quot;Aloh FROM HwII&quot;
+</pre>
+</div>
+<p><i>The mission was taken from Python CCPS 109 Fall 2018. It was taught for the Ryerson Chang School of Continuing Education by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/caps-lock">See the task on CheckiO</a></p>

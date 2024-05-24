@@ -1,0 +1,34 @@
+<!-- Describe task in general -->
+<p><i>Maybe it's a cipher? Maybe, but we don’t know for sure.</i></p>
+<p><i>Maybe you can call it <a href="https://en.wikipedia.org/wiki/String_operations#String_homomorphism" target="_blank">"homomorphism"</a>? I wish I knew this word before.</i></p>
+<p>You need to check that the string A is isometric to the string B. There exists a function that turns characters from A into characters in the same spot in B.</p>
+<p>Characters in A correspond to a unique character value in B. Characters in B are allowed to correspond to multiple character values in A.</p>
+<div class="for_info_only" style="text-align: center">
+<img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/835d2a2492b24aa682da086afed4f6a1/example.png" style="max-height: 350px"/>
+</div>
+<p>
+<strong>Input:</strong> Two strings <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> Logic value <span translate="no">(bool)</span>.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert isometric_strings(&quot;add&quot;, &quot;egg&quot;) == True
+assert isometric_strings(&quot;foo&quot;, &quot;bar&quot;) == False
+assert isometric_strings(&quot;bar&quot;, &quot;foo&quot;) == True
+assert isometric_strings(&quot;&quot;, &quot;&quot;) == True
+</pre>
+</div>
+<p>
+<strong>Precondition:</strong><br/>
+<ul>
+<li>both strings have the same length.</li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/isometric-strings">See the task on CheckiO</a></p>

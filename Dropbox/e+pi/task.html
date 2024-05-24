@@ -1,0 +1,28 @@
+<p style="text-align: justify;">
+    In this challenge, you will be given a result, and your task is to find an arithmetic expression that uses only the numbers pi and e to yield that result.
+    You can use addition, subtraction, multiplication, division, and exponentiation operations, and each number (pi and e) can appear at most two times.
+    Parentheses are not allowed. If there are multiple solutions, return the one that requires fewer operations. If there are still multiple solutions,
+    return the one that comes first alphabetically (without spaces). The calculated result must be equal with an error smaller than 1 x 10<sup>-10</sup>. 
+    If there is no solution for the input, return None. Non negative/positive symbol at the beginning is allowed.
+</p>
+<p>
+<strong>Input:</strong> Floating point number <span translate="no">(float)</span>.
+</p>
+<p>
+<strong>Output:</strong> String <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert checkio(5.85987448205) == &quot;e+pi&quot;
+assert checkio(18.2958548951) == &quot;e**e+pi&quot;
+assert checkio(47.6085189284) == &quot;e**e*pi&quot;
+assert checkio(-0.42331082513) == &quot;e-pi&quot;
+</pre>
+<p class="for_info_only">
+<strong>How it is used:</strong>
+In challenges that require finding arithmetic expressions, we can intuit interesting mathematical relationships. For example, one such relationship is the fact that 1/1<sup>2</sup> + 1/2<sup>2</sup> + 1/3<sup>2</sup> + ... = 1.64493406685... = π<sup>2</sup>/6 
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/epi">See the task on CheckiO</a></p>

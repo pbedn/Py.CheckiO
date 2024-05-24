@@ -1,0 +1,21 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: "def simplify_path(path):\n    \"\"\"\n        simplifying a given path\n  \
+  \  \"\"\"\n    # your code here\n    return path\n\nif __name__ == '__main__':\n\
+  \    # These \"asserts\" using only for self-checking and not necessary for auto-testing\n\
+  \n    # last slash is not important\n    assert simplify_path('/a/') == '/a'\n\n\
+  \    # double slash can be united in one\n    assert simplify_path('/a//b/c') ==\
+  \ '/a/b/c'\n\n    # double dot - go to previous folder\n    assert simplify_path('dir/fol/../no')\
+  \ == 'dir/no'\n    assert simplify_path('dir/fol/../../no') == 'no'\n\n    # one\
+  \ dot means current dir\n    assert simplify_path('/a/b/./ci') == '/a/b/ci'\n  \
+  \  assert simplify_path('vi/..') == '.'\n    assert simplify_path('./.') == '.'\n\
+  \n    # you can't go deeper than root folder\n    assert simplify_path('/for/../..')\
+  \ == '/'\n    assert simplify_path('/for/../../no/..') == '/'\n\n    # not all double-dots\
+  \ can be simplyfied in related path\n    assert simplify_path('for/../..') == '..'\n\
+  \    assert simplify_path('../foo') == '../foo'\n    \n    print('Simply enough!\
+  \ Let\\'s check it now!!')"
+seconds_from_change: 9223372036854775807

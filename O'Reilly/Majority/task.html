@@ -1,0 +1,35 @@
+<!-- Describe task in general -->
+<p style="text-align: center;">
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/dd5c821df9724eaba62f809633451486/convert/grey/title.png"/>
+</p>
+<p>
+    We have a <span translate="repeat">list</span> of logic values <span translate="no">(bool)</span>. Let's check if the majority of elements are <b class="code">True</b>.
+</p>
+<p>
+    Some cases worth mentioning: 1) an empty <span translate="repeat">list</span> should return <b class="code">False</b>;
+    2) if <b class="code">True</b>-s and <b class="code">False</b>-s have an equal amount, function should return <b class="code">False</b>.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/dd5c821df9724eaba62f809633451486/example.svg" style="max-height: 200px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> A <span translate="repeat">list</span> of logic values <span translate="no">(bool)</span>.
+</p>
+<p>
+<strong>Output:</strong> A logic value <span translate="no">(bool)</span>. 
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert is_majority([True, True, False, True, False]) == True
+assert is_majority([True, True, False]) == True
+assert is_majority([True, True, False, False]) == False
+assert is_majority([True, True, False, False, False]) == False
+</pre>
+</div>
+
+
+<p><a href="https://py.checkio.org/en/mission/majority">See the task on CheckiO</a></p>

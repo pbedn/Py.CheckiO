@@ -1,0 +1,50 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/818d8a958b40490bbc355a4903f0a1d6/convert/grey/title.png"/>
+<p>
+    Combining the first names of beloved celebrity couples to a catchy shorthand for mass media consumption turns out to be simple to automate.  
+</p>
+<p style="text-align: justify;">
+    Start by counting how many maximal groups of consecutive vowels (<i>aeiou</i>, as to keep this problem simple, the letter <i>y</i> is always a consonant) exist inside the <code>first</code> name. For example, "br<b>a</b>d" and "j<b>ea</b>n" have one vowel group, "j<b>ea</b>n<b>ie</b>" and "br<b>i</b>t<b>ai</b>n" have two, and "<b>a</b>ng<b>e</b>l<b>i</b>n<b>a</b>" and "<b>a</b>l<b>e</b>x<b>a</b>nd<b>e</b>r" have four. Note that a vowel group can contain more than one vowel, as in the word "q<b>ueuei</b>ng" with an entire fiver.
+</p>
+<p style="text-align: justify;">
+    If the first name has only one vowel group, keep only the consonants before that group and lose everything else. For example, "b<b>e</b>n" becomes "b", and "br<b>a</b>d" becomes "br". Otherwise, if the first word has <i>n</i> &gt; 1 vowel groups, keep everything before the <strong>second last</strong> vowel group <i>n</i> – 1. For example, "angel<b>i</b>na" becomes "angel" and "alex<b>a</b>nder" becomes "alex". 
+</p>
+<p>
+    Concatenate that string with the string that you get by removing all consonants from the beginning of the <code>second</code> name.
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/818d8a958b40490bbc355a4903f0a1d6/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Two strings <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> String <span translate="no">(str)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert brangelina(&quot;brad&quot;, &quot;angelina&quot;) == &quot;brangelina&quot;
+assert brangelina(&quot;angelina&quot;, &quot;brad&quot;) == &quot;angelad&quot;
+assert brangelina(&quot;sheldon&quot;, &quot;amy&quot;) == &quot;shamy&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i><code>first</code> and <code>second</code> names are guaranteed to consist of the 26 lowercase English letters, and each name will have at least one vowel and one consonant somewhere</i>.</li>
+</ul>
+</p>
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/combining-celebrity-names">See the task on CheckiO</a></p>

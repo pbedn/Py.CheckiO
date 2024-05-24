@@ -1,0 +1,50 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    In <a href="https://en.wikipedia.org/wiki/Domino_tiling" target="_blank">domino tiling</a> problem, a room of contiguous unit squares is to be tessellated with blank 2-by-1 domino tiles, each such tile placed either vertically or horizontally.
+</p>
+<p style="text-align: justify;">
+    In our version of domino tiling, the shape of the room consists of vertically stacked rows that all share the common straight line left wall. The list of <b>rows</b> contains the length of the individual rows, as measured in squares. <b>You need to find and return a number of ways, how the given room may be tiled.</b>
+</p>
+<p style="text-align: justify;">
+    Of course, the task of domino tiling can be solved only for even room sizes. But this necessary condition by itself does not yet guarantee the existence of some tiling on the mutilated rooms, like in this mission. Here is an interesting and useful video to dive into problem:
+</p>
+<p style="text-align: center;">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Yy7Q8IWNfHM" title="YouTube video player" width="560"></iframe>
+</p>
+<!-- <p style="text-align: center;">
+    <img  title="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/ee78687427c84822be68d54e1ff34adf/example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> <span translate="repeat">List</span> of integers <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Output:</strong> Integer <span translate="no">(int)</span>.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert domino_tile([2, 2]) == 2
+assert domino_tile([4, 3, 2, 1]) == 0
+assert domino_tile([5, 3, 4, 2]) == 7
+assert domino_tile([8, 8, 8, 8, 8, 9, 9]) == 1895245
+</pre>
+<p><i>The mission was taken from Python CCPS 109. It is taught for Ryerson Chang School of Continuing Education by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+
+
+<p><a href="https://py.checkio.org/en/mission/count-domino-tilings">See the task on CheckiO</a></p>

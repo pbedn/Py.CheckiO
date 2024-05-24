@@ -1,0 +1,61 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    You are given an unordered  list of tasks. Each task is as string, which incudes a start and end of task and has a view <b>"hh:mm-hh:mm"</b>. Tasks are unique. You function must return chronologically sorted, filtered list of tasks, which can be scheduled without overlapping. For this purpose, you are also given a <b>mode</b> as an integer, which tells you the rule of choosing non-overlapping tasks.
+</p>
+<p>
+    Modes:
+    <ul>
+<li><b>1</b>: earliest start among available, (if a few variants) shortest duration;</li>
+<li><b>2</b>: earliest start among available, (if a few variants) longest duration;</li>
+<li><b>3</b>: longest <b>total</b> duration of chosen tasks, (if a few variants) larger number of tasks done, (if a few variants) earliest;</li>
+<li><b>4</b>: larger number of tasks done, (if a few variants) longest <b>total</b> duration of chosen tasks, (if a few variants) earliest.</li>
+</ul>
+</p>
+<p style="text-align: justify;">
+    At animation tasks are always sorted as earliest start + shortest duration. Each task is positioned on the first "row", where it is not overlapping with the previous task in a "row". If the current task is overlapping with all existed "rows" - the new "row" is started.
+    For example, for the input <b>[['09:00-10:00', '09:50-10:10', '10:00-11:00', '09:00-09:20', '10:50-11:10'], 2]</b>, the animation (solved) would be the following:   
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/62ff5513eaa14f569e467706bf6893a0/example.png" style="max-height: 150px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> A list of tasks as strings <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> A sorted filtered list of tasks as strings <span translate="no">(str)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert schedule(
+    [&quot;09:00-10:00&quot;, &quot;09:50-10:10&quot;, &quot;10:00-11:00&quot;, &quot;09:00-09:20&quot;, &quot;10:50-11:10&quot;], 1
+) == [&quot;09:00-09:20&quot;, &quot;09:50-10:10&quot;, &quot;10:50-11:10&quot;]
+assert schedule(
+    [&quot;09:00-10:00&quot;, &quot;09:50-10:10&quot;, &quot;10:00-11:00&quot;, &quot;09:00-09:20&quot;, &quot;10:50-11:10&quot;], 2
+) == [&quot;09:00-10:00&quot;, &quot;10:00-11:00&quot;]
+assert schedule(
+    [&quot;09:00-10:00&quot;, &quot;09:50-10:10&quot;, &quot;10:00-11:00&quot;, &quot;09:00-09:20&quot;, &quot;10:50-11:10&quot;], 3
+) == [&quot;09:00-10:00&quot;, &quot;10:00-11:00&quot;]
+assert schedule(
+    [&quot;09:00-10:00&quot;, &quot;09:50-10:10&quot;, &quot;10:00-11:00&quot;, &quot;09:00-09:20&quot;, &quot;10:50-11:10&quot;], 4
+) == [&quot;09:00-09:20&quot;, &quot;09:50-10:10&quot;, &quot;10:50-11:10&quot;]
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+
+
+<p><a href="https://py.checkio.org/en/mission/schedule-mode-builder">See the task on CheckiO</a></p>

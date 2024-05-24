@@ -1,0 +1,22 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: "def playfair_attack(plaintext: str, cryptogram: str) -> str:\r\n    # your\
+  \ code here\r\n    return \"\"\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    print(\"\
+  Example:\")\r\n    print(\r\n        playfair_attack(\r\n            \"sixcrazykingsvowedtoabolishmyquitepitifulioust\"\
+  ,\r\n            \"zlgrcekqztvoolunhbvkemsvlzadnpzflrqlvlhwtluzkl\",\r\n       \
+  \ )\r\n    )\r\n\r\n    # These \"asserts\" are used for self-checking and not for\
+  \ an auto-testing\r\n    assert (\r\n        playfair_attack(\r\n            \"\
+  sixcrazykingsvowedtoabolishmyquitepitifulioust\",\r\n            \"zlgrcekqztvoolunhbvkemsvlzadnpzflrqlvlhwtluzkl\"\
+  ,\r\n        )\r\n        == \"vklprhcrixbpzebc\"\r\n    )\r\n\r\n    assert (\r\
+  \n        playfair_attack(\r\n            \"pythonsxstandardlibraryisveryextensiveofferingawiderangeofstuffx\"\
+  ,\r\n            \"aiwblarskwphydowzehmhoieksxlixgwvufxlvzqvizxbehdycxlphyxzqkwcvsi\"\
+  ,\r\n        )\r\n        == \"dmhfiulxgbxvqhyx\"\r\n    )\r\n\r\n    assert (\r\
+  \n        playfair_attack(\r\n            \"zombiesquicklyatetwelveofmyneighboursx\"\
+  ,\r\n            \"uzuywyksmzdcvhfgtnftonbnkfevywlgxzmxzd\",\r\n        )\r\n  \
+  \      == \"xnzpchtyrfcwpkth\"\r\n    )\r\n\r\n    print(\"Coding complete? Click\
+  \ 'Check' to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

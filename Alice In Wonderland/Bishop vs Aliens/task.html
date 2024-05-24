@@ -1,0 +1,49 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/8de391c1e90b4ad9b867b0f51365a9a7/convert/grey/title.png"/>
+<p style="text-align: justify;">
+    A lone chess bishop finds himself standing on the (zero-based indexing) square <code>(x, y)</code> of a curious <code>m * n</code> chessboard floating in outer space, covered with completely frictionless magic ice. This board is not necessarily square, but can be any rectangle of integer dimensions. The board is surrounded from all sides with bouncy walls similar to an air hockey table. Some of the squares on the board contain <code>aliens</code> that make game over man for anyone who enters that square.
+</p>
+<p style="text-align: justify;">
+    The bishop can initially propel himself to any of the four diagonal directions. After this initial impulse gets him going, the bishop can no longer control his movements on the frictionless ice, but will keep sliding towards whatever end the present direction vector and bouncing from the walls take him. It is even possible for the bishop to forever repeat the same cycle of squares. 
+</p>
+<p style="text-align: justify;">
+    The bishop must reach any one of the four possible exits at the four corners of the board. This function should determine whether there exists at least one starting direction that leads the bishop to the safety of any one of the four corners, avoiding all the <code>aliens</code> along the way. Look at the example <code>x = 3, y = 2, m = 4, n = 5, aliens = [(2, 2), (1, 4)]</code> =&gt; <code>True</code>.
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/8de391c1e90b4ad9b867b0f51365a9a7/bishop-vs-aliens.svg" style="max-height: 200px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Four integers <span translate="no">(int)</span> and <span translate="repeat">list</span> of tuples of two integers.
+</p>
+<p>
+<strong>Output:</strong> Logic value <span translate="no">(bool)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert reach_corner(0, 2, 5, 5, []) == False
+assert reach_corner(4, 4, 9, 9, [(0, 0), (0, 8), (8, 0), (8, 8)]) == False
+assert reach_corner(1, 1, 1000, 2, [(0, 0), (0, 1), (999, 0)]) == True
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i>0 &lt;= x &lt; m, 0 &lt;= y &lt; n;</i></li>
+<li><i>m &gt; 1, n &gt; 1;</i></li>
+<li><i>(x,y) not in aliens.</i></li>
+</ul>
+</p>
+<p><i>The mission was taken from <span translate="no">Python CCPS 109</span>. It is taught for <span translate="no">Ryerson Chang School of Continuing Education</span> by <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
+
+
+<p><a href="https://py.checkio.org/en/mission/bishop-vs-aliens">See the task on CheckiO</a></p>

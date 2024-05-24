@@ -1,0 +1,68 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    You are given a 5x5 matrix of integers as tuple of tuples. Use it as a mask for the square-arranged letters of the alphabet from "a" to "y" (row-major order). Return a string of characters (sorted, ignore case), picked from the square of letters according to the mask with the following rule:
+    <ul>
+<li><code>0</code> in mask - do not take the respective character;</li>
+<li><code>1</code> - take in lowercase;</li>
+<li><code>2</code> - take in uppercase.</li>
+</ul>
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/acd27993bc4f4d83bde024f7ad4dbd22/matrix-2-string-2.svg" style="max-height: 250px" title="example"/>
+</p>
+<p style="text-align: justify;">
+    Here is a mission to make a reverse conversion - <a href="https://py.checkio.org/en/mission/string-2-matrix/" target="_blank">String-2-Matrix</a>.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Tuple of five tuples of five integers (<span translate="no">int</span>) each.
+</p>
+<p>
+<strong>Output:</strong> String (<span translate="no">str</span>). 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert (
+    converter(
+        (
+            (0, 0, 1, 0, 0),
+            (0, 1, 0, 1, 0),
+            (1, 0, 2, 0, 1),
+            (0, 1, 0, 1, 0),
+            (0, 0, 1, 0, 0),
+        )
+    )
+    == &quot;cgikMoqsw&quot;
+)
+assert (
+    converter(
+        (
+            (1, 0, 1, 0, 1),
+            (0, 2, 0, 2, 0),
+            (1, 0, 1, 0, 1),
+            (0, 2, 0, 2, 0),
+            (1, 0, 1, 0, 1),
+        )
+    )
+    == &quot;aceGIkmoQSuwy&quot;
+)
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+
+
+<p><a href="https://py.checkio.org/en/mission/matrix-2-string">See the task on CheckiO</a></p>

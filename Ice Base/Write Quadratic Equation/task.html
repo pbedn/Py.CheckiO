@@ -1,0 +1,49 @@
+<!-- Describe task in general -->
+<p>
+<a href="https://en.wikipedia.org/wiki/Quadratic_equation#Solving_the_quadratic_equation" target="_blank">Quadratic Equation</a>
+    may be expressed as a product<br/>
+<pre>a(x-x1)(x-x2) = 0,</pre>
+    where <b>x1</b> and <b>x2</b> are the solutions of equation, so called roots.
+    After opening the brackets you receive well known form<br/>
+<pre>a*x**2 + b*x + c = 0.</pre>
+    This is what you should do in this mission. You have input list with
+    integers - <b>a, x1 [, x2]</b>. If it has length 2, it means, <b>x1 == x2</b>: equation
+    has two equal roots (one distinct root). Your function should return quadratic equation as a string.
+    Pay attention to specific cases. Use <a href="https://www.calculatorsoup.com/calculators/algebra/quadratic-formula-calculator.php" target="_blank">Quadratic Formula Calculator</a>
+    for recheck. Good luck!   
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> List with 2-3 integers.
+</p>
+<p>
+<strong>Output:</strong> String. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert quadr_equation([2, 4, 6]) == &quot;2*x**2 - 20*x + 48 = 0&quot;
+assert quadr_equation([-2, 4, 6]) == &quot;-2*x**2 + 20*x - 48 = 0&quot;
+assert quadr_equation([2, 4, -4]) == &quot;2*x**2 - 32 = 0&quot;
+assert quadr_equation([2, 4, 0]) == &quot;2*x**2 - 8*x = 0&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<i>Practice of automatic representing human-friendly view of equations.</i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i>a != 0; abs(a) == 1 -&gt; '[-]x**2'; a != abs(1) - &gt; '[-]a*x**2'</i><br/></li>
+<li><i>exactly one whitespace around signs: [-]a*x**2 sign b*x sign c = 0</i><br/></li>
+<li><i>abs(b) == 1 -&gt; [-]a*x**2 sign x sign c = 0</i><br/></li>
+<li><i>keep correct view and spacing when x1=x2=0, x1 or x2 = 0, x1=-x2</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/write-quadratic-equation">See the task on CheckiO</a></p>

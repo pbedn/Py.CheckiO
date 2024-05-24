@@ -1,0 +1,19 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Solved
+code: "def first_word(text: str) -> str:\n    \"\"\"\n        returns the first word\
+  \ in a given text.\n    \"\"\"\n    text = text.replace(\",\", \" \")\n    text\
+  \ = text.replace(\"...\", \" \")\n    text = text.lstrip(\" \")\n    \n    if \"\
+  \ \" in text:\n        text = text.split(\" \")\n    else:\n        text = text.split(\"\
+  .\")\n    \n    print(text)\n    return text[0]\n\n\nif __name__ == '__main__':\n\
+  \    print(\"Example:\")\n    print(first_word(\"Hello world\"))\n    \n    # These\
+  \ \"asserts\" are used for self-checking and not for an auto-testing\n    assert\
+  \ first_word(\"Hello world\") == \"Hello\"\n    assert first_word(\" a word \")\
+  \ == \"a\"\n    assert first_word(\"don't touch it\") == \"don't\"\n    assert first_word(\"\
+  greetings, friends\") == \"greetings\"\n    assert first_word(\"... and so on ...\"\
+  ) == \"and\"\n    assert first_word(\"hi\") == \"hi\"\n    print(\"Coding complete?\
+  \ Click 'Check' to earn cool rewards!\")\n"
+seconds_from_change: 199970056

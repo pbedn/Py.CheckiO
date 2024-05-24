@@ -1,0 +1,86 @@
+<p style="text-align: justify;">
+ You have to write a function that receives a tree – potentially large but finite –
+    and a list of pairs of tree's nodes.
+ <br/>
+ For each pair, you must determine if the two nodes are on a same path (True) in the tree or not (False),
+    then return an iterable/list of these booleans.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ two arguments:
+ <ul>
+  <li>
+   a tree as a tuple (a node, list of sub-trees)
+  </li>
+  <li>
+   a list of pairs (the tuples of two nodes)
+  </li>
+ </ul>
+ <br/>
+ <strong>
+  Output:
+ </strong>
+ An iterable/list of booleans.
+</p>
+<br/>
+<div class="for_info_only">
+ <strong>
+  Example:
+ </strong>
+ <br/>
+ <br/>
+ <pre class="brush: python">
+on_same_path(
+    ('Me', [('Daddy', [('Grandpa', []),
+                       ('Grandma', [])]),
+            ('Mom', [('Granny', []),
+                     ('?', [])])]),
+    [('Grandpa', 'Me'), ('Daddy', 'Granny')],
+) == [True, False]
+</pre>
+ <img alt="basic #1" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/beba56d84a3341ac9a678f187d2422f7/basic-1.png" style="max-height: 1000px; margin-top: 10px; margin-bottom: 10px;" title="basic #1"/>
+ <pre class="brush: python">
+on_same_path(
+    (1, [(2, [(4, []),
+              (5, [(7, []),
+                   (8, []),
+                   (9, [])])]),
+         (3, [(6, [])])]),
+    [(1, 5), (2, 9), (2, 6)],
+) == [True, True, False]
+</pre>
+ <img alt="basic #2" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/beba56d84a3341ac9a678f187d2422f7/basic-2.png" style="max-height: 1000px; margin-top: 15px; margin-bottom: 10px;" title="basic #2"/>
+ <pre class="brush: python">
+on_same_path(
+    (0, [(1, [(2, []),
+              (3, [])]),
+         (4, [(5, []),
+              (6, [])]),
+         (7, [(8, []),
+              (9, [])])]),
+    [(4, 2), (0, 5), (2, 3), (9, 2), (6, 4), (7, 8), (8, 1)],
+) == [False, True, False, False, True, True, False]
+</pre>
+</div>
+<img alt="basic #3" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/beba56d84a3341ac9a678f187d2422f7/basic-3.png" style="max-height: 1000px; margin-top: 15px; margin-bottom: 10px;" title="basic #3"/>
+<p>
+ <strong>
+  Preconditions:
+ </strong>
+ <ul>
+  <li>
+   the tree is finite and has less than 1000 nodes
+  </li>
+  <li>
+   for each given tree all nodes are either the integers or strings
+  </li>
+  <li>
+   len(pairs) ≤ 32
+  </li>
+ </ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/on-the-same-path">See the task on CheckiO</a></p>

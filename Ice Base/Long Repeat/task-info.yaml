@@ -1,0 +1,17 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Solved
+code: "def long_repeat(line):\n    \"\"\"\n        length the longest substring that\
+  \ consists of the same char\n    \"\"\"\n    if not line: return 0\n    last = line[0]\n\
+  \    s = []\n    ss = ''\n    for l in line:\n        if l != last:\n          \
+  \  s.append([ss])\n            ss = ''\n            last = l\n        ss += l\n\
+  \    # print(max([len(w[0]) for w in s]))\n    if not s:\n        return len(line)\n\
+  \    return max([len(w[0]) for w in s])\n        \n            \n        \n\nif\
+  \ __name__ == '__main__':\n    #These \"asserts\" using only for self-checking and\
+  \ not necessary for auto-testing\n    assert long_repeat('sdsffffse') == 4, \"First\"\
+  \n    assert long_repeat('ddvvrwwwrggg') == 3, \"Second\"\n    print('\"Run\" is\
+  \ good. How is \"Check\"?')\n"
+seconds_from_change: 210212137

@@ -1,0 +1,26 @@
+<p style="text-align: justify;"><i><a href="https://py.checkio.org/forum/post/11382/4-mission-ideas-substrings/">There are four substring missions</a> that were born all in one day and you shouldn’t be needed more than one day to solve them. All of those mission can be simply solved by brute force, but is it always the best way to go? (you might not have access to all of those missions yet, but they are going to be available with more opened islands on the map).</i></p>
+<p style="text-align: justify;">
+    It is the fourth and the last mission of the series. But if in the first mission you needed to find repeating letters, then in this one you should find a repeating sequence inside the substring. I have an example for you: in a string "abababc" - "ab" is a sequence that repeats more than once, so the answer will be "ababab"
+</p>
+<p style="text-align: justify;">
+   Please note that it is important to find the longest repeating sequence, not just the one that repeats the most times. That is, if we have a string like "aaaaaxyxyxy", the correct answer would be "xyxyxy" instead of "aaaaa", since "xyxyxy" has a length of 6 while "aaaaa" has a length of 5, even though both patterns repeat 3 and 5 times, respectively.
+</p>
+<p>
+<strong>Input:</strong> String <span translate="no">(str)</span>.
+
+<p>
+<strong>Output:</strong> String <span translate="no">(str)</span>. 
+</p>
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert repeat_inside(&quot;aaaaa&quot;) == &quot;aaaaa&quot;
+assert repeat_inside(&quot;aabbff&quot;) == &quot;aa&quot;
+assert repeat_inside(&quot;aababcc&quot;) == &quot;abab&quot;
+assert repeat_inside(&quot;abc&quot;) == &quot;&quot;
+</pre>
+</div>
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/long-repeat-inside">See the task on CheckiO</a></p>

@@ -1,0 +1,83 @@
+<p>
+ <i>
+  This is the fourth mission inspired by classical cryptography. In this mission we will attempt to break the Rotating Grille cipher. For more info on grille cipher check out missions
+  <a href="https://py.checkio.org/mission/cipher-map2/">
+   Cipher Map
+  </a>
+  and
+  <a href="https://py.checkio.org/mission/rotating-grille-cipher/">
+   Rotating Grille Cipher
+  </a>
+  - it's highly recommended that you've solved them before trying this one.
+ </i>
+</p>
+<p>
+ In cryptanalysis,
+ <i>
+  Known Plaintext Attack
+ </i>
+ , or
+ <i>
+  KPA
+ </i>
+ , is a mode of attack on a cipher where the analyst has access to both the ciphertext and to the corresponding plaintext; those can be used to derive the secret key and decipher all further messages encrypted with it. Some types of ciphers are very vulnerable to KPA: for instance, Caesar's cipher can be broken knowing just one pair of corresponding plaintext and ciphertext symbols; in other cases, finding the key requires a bit more work.
+</p>
+<p>
+ In this task we'll try to perform known plaintext attack on the rotating grille cipher. First, let's quickly go over the algorithm: the key to encryption is a square stencil with holes cut in it (in this mission we will use grille of size 8x8);  the sender places the grille on a sheet and writes the first 16 letters of the message; then, turning the grille 90 degrees clockwise, the second 16 are written, and so on until the grid is filled. To decrypt a message, receiver arranges the cryptogram in an 8x8 square, places the grille on top of it and reads the letters in the holes, rotating the grille when necessary.
+</p>
+<p>
+ You are given two strings of text: a message and a corresponding cryptogram; both strings are 64 characters long. You need to find and return the grille used to encrypt the message. Like previous missions, the grille is a list of strings where "X" means hole, "." means no hole.
+</p>
+<p>
+ Important note: each input in this task is guaranteed to have a single solution.
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ plaintext: string, cryptogram: string
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ key: list of str size 8x8
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+find_grille('weareallfromxanthcubesaidquicklyjustvisitingphazewewontbeforlong',
+            'wejhewucuaeswtbrveeoisantsalilbifdteifrqunooigrmplxcakhonnlagtyz') == ['X...X...',
+                                                                                    '.X.....X',
+                                                                                    '..X...X.',
+                                                                                    '...X.X..',
+                                                                                    'X.....X.',
+                                                                                    '...X...X',
+                                                                                    '..X.X...',
+                                                                                    '.X...X..']                                   
+</pre>
+</div>
+<p>
+ <strong>
+  Preconditions:
+ </strong>
+ <br/>
+ len(plaintext) == 64
+ <br/>
+ len(cryptogram) == 64
+ <br/>
+ len(key) == 8
+ <br/>
+ all(len(line) == 8 for line in key)
+ <br/>
+ all(all(cell == "X" or cell == "." for cell in line) for line in key)
+ <br/>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/grille-cipher-attack">See the task on CheckiO</a></p>

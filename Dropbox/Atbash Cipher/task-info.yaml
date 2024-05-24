@@ -1,0 +1,14 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: "def atbash(plaintext: str) -> str:\r\n    # your code here\r\n    return \"\
+  \"\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    print(\"Example:\\nplaintext:\
+  \ testing\")\r\n    print(atbash(\"testing\"))\r\n\r\n    # These \"asserts\" are\
+  \ used for self-checking and not for an auto-testing\r\n    assert atbash(\"testing\"\
+  ) == \"gvhgrmt\"\r\n    assert atbash(\"attack at dawn\") == \"zggzxp zg wzdm\"\r\
+  \n    assert atbash(\"Hello, world!\") == \"Svool, dliow!\"\r\n\r\n    print(\"\
+  Coding complete? Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

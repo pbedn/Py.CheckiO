@@ -1,0 +1,44 @@
+<!-- Describe task in general -->
+<p>You are given a list of integers, and your goal is to perform the following steps:</p>
+<ul>
+<li>Identify and group together all the sorted sequences within the list. A sorted sequence is a group of numbers that are arranged in either ascending or descending order.</li>
+<li>Sort the input list by these groups while preserving the relative order of elements within each group.</li>
+<li>Return the sorted list with the groups unpacked, meaning that the individual numbers from each group are in the final result, and their order reflects the sorted sequence within each group.</li>
+</ul>
+<p>For example, consider the input list <code>[5, 1, 5, 0, 5]</code>:</p>
+<ul>
+<li>Group the numbers to obtain <code>[[5, 1], [5, 0], [5]]</code> (three groups are identified).</li>
+<li>Sort the input list by groups while maintaining the relative order of elements within each group to get <code>[[5], [5, 0], [5, 1]]</code>.</li>
+<li>Unpack the groups to obtain the final sorted list: <code>[5, 5, 0, 5, 1]</code>.</li>
+</ul>
+<p style="text-align: justify;">
+    Let's look at another example in a view of a scheme:
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/e0a6623d9626499f9225a839abb9a31a/sort-sorted-groups.svg" style="max-height: 300px" title="example"/>
+</p>
+<p>Important Points:</p>
+<ul>
+<li>When identifying sorted groups, adjacent equal numbers are considered part of the same group and keep previously detected order.</li>
+<li>To determine the sorting order for each group, look for the first different number beyond the initial equal numbers. The sorting order for each group is not determined once for the entire list.</li>
+<li>When building the groups, be greedy from the left, taking as many numbers as possible to create a distinct ordered sequence for each group.</li>
+</ul>
+<p>Good luck with your task!</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> List of integers.
+</p>
+<p>
+<strong>Output:</strong> List of integers.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert sorted_groups([]) == []
+assert sorted_groups([5]) == [5]
+assert sorted_groups([5, 1, 5, 0, 5]) == [5, 5, 0, 5, 1]
+assert sorted_groups([5, 5, 1]) == [5, 5, 1]
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/sort-sorted-groups">See the task on CheckiO</a></p>

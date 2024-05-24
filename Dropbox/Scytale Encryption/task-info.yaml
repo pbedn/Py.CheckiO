@@ -1,0 +1,18 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: "from typing import Optional\r\n\r\n\r\ndef scytale_decipher(ciphertext: str,\
+  \ crib: str) -> Optional[str]:\r\n    # your code here\r\n    return \"\"\r\n\r\n\
+  \r\nif __name__ == \"__main__\":\r\n    print(\"Example:\")\r\n    print(scytale_decipher(\"\
+  aaaatctwtkdn\", \"dawn\"))\r\n\r\n    # These \"asserts\" are used for self-checking\
+  \ and not for an auto-testing\r\n    assert scytale_decipher(\"aaaatctwtkdn\", \"\
+  dawn\") == \"attackatdawn\"\r\n    assert scytale_decipher(\"hdoeerlallrdow\", \"\
+  world\") == \"hellodearworld\"\r\n    assert (\r\n        scytale_decipher(\"totetshpmeecisendysescwticsriasraytlaegphet\"\
+  , \"sicret\")\r\n        == None\r\n    ), \"Crib is not in plaintext\"\r\n    assert\
+  \ (\r\n        scytale_decipher(\"aaaatctwtkdn\", \"at\") == None\r\n    ), \"More\
+  \ than one possible decryptions\"\r\n\r\n    print(\"Coding complete? Click 'Check'\
+  \ to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

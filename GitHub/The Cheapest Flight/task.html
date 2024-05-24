@@ -1,0 +1,64 @@
+<!-- Describe task in general -->
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/a7a3b670c02047be804514e296327722/flight.jpg" style="max-height: 300px" title="example"/>
+</p>
+<p><i>"We need to fly home as cheaply as possible so that more money is left for gifts. Aunt Lidia asked for different kinds of cheeses, and Vasia wanted a new toy car. I’ve been looking at the schedule for quite a while and I’m starting to think that some planes are flying in vain".</i></p>
+<p>As the input you get the flight schedule as list, each element of which is the price of a direct flight between 2 cities (list of 3 elements - 2 city names as a string, and a flight price).</p>
+<p>Planes fly in both directions and the price in both directions is the same. There is a possibility that there are no direct flights between cities.</p>
+<p>Find the price of the cheapest flight between cities that are given as the 2nd and 3rd arguments. In case the flight can not be performed, return 0.</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> 3 arguments: the flight schedule as a list of lists, city of departure and destination city as strings.
+ </p>
+<p>
+<strong>Output:</strong> The best price as integer.
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert (
+    cheapest_flight([[&quot;A&quot;, &quot;C&quot;, 100], [&quot;A&quot;, &quot;B&quot;, 20], [&quot;B&quot;, &quot;C&quot;, 50]], &quot;A&quot;, &quot;C&quot;) == 70
+)
+assert (
+    cheapest_flight([[&quot;A&quot;, &quot;C&quot;, 100], [&quot;A&quot;, &quot;B&quot;, 20], [&quot;B&quot;, &quot;C&quot;, 50]], &quot;C&quot;, &quot;A&quot;) == 70
+)
+assert (
+    cheapest_flight(
+        [
+            [&quot;A&quot;, &quot;C&quot;, 40],
+            [&quot;A&quot;, &quot;B&quot;, 20],
+            [&quot;A&quot;, &quot;D&quot;, 20],
+            [&quot;B&quot;, &quot;C&quot;, 50],
+            [&quot;D&quot;, &quot;C&quot;, 70],
+        ],
+        &quot;D&quot;,
+        &quot;C&quot;,
+    )
+    == 60
+)
+assert (
+    cheapest_flight([[&quot;A&quot;, &quot;C&quot;, 100], [&quot;A&quot;, &quot;B&quot;, 20], [&quot;D&quot;, &quot;F&quot;, 900]], &quot;A&quot;, &quot;F&quot;) == 0
+)
+</pre>
+</div>
+<!-- Here you can explain how it can be used in development. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it can be used:</strong>
+<i>In everyday life to find the optimal combination.</i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i>price is always integer;</i></li>
+<li><i>the flight schedule contains at least one element;</i></li>
+<li><i>both cities are in the schedule.</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/the-cheapest-flight">See the task on CheckiO</a></p>

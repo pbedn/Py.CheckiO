@@ -1,0 +1,21 @@
+type: checkiO
+files:
+  - name: mission.py
+    visible: true
+    learner_created: false
+status: Unchecked
+code: "from typing import List, Optional\r\n\r\n\r\ndef grille_encrypt(plaintext:\
+  \ str, grille: List[str]) -> Optional[str]:\r\n    # your code here\r\n    return\
+  \ \"\"\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    print(\"Example:\")\r\n  \
+  \  print(grille_encrypt(\"cardangrilletest\", [\".X..\", \".X..\", \"...X\", \"\
+  X...\"]))\r\n\r\n    # These \"asserts\" are used for self-checking and not for\
+  \ an auto-testing\r\n    assert (\r\n        grille_encrypt(\"cardangrilletest\"\
+  , [\".X..\", \".X..\", \"...X\", \"X...\"])\r\n        == \"actilangeslrdret\"\r\
+  \n    )\r\n    assert (\r\n        grille_encrypt(\r\n            \"quickbrownfoxjumpsoverthelazydog\"\
+  , [\"X...\", \"...X\", \"..X.\", \".X..\"]\r\n        )\r\n        == \"qxwkbnjufriumcoopyeerldsatoogvhz\"\
+  \r\n    )\r\n    assert (\r\n        grille_encrypt(\r\n            \"quickbrownfoxjumpsoverthelazydog\"\
+  , [\".XX.\", \".XX.\", \"..X.\", \"X...\"]\r\n        )\r\n        == None\r\n \
+  \   )\r\n    assert grille_encrypt(\"cardangrilletest\", [\"...X\", \"....\", \"\
+  ....\", \"....\"]) == None\r\n\r\n    print(\"Coding complete? Click 'Check' to\
+  \ earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

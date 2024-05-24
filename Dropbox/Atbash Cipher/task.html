@@ -1,0 +1,61 @@
+<p>
+ <i>
+  This is the first in a series of missions inspired by classical cryptography. In this mission we will take a look at the Atbash cipher.
+ </i>
+</p>
+<p>
+ Atbash is one of the oldest known ciphers, created in Middle East around 600 B.C.; the first known examples of it can be found in the Dead Sea Scrolls 
+    (ancient religious Hebrew manuscripts), where it was used to encrypt certain important names and words.
+</p>
+<p>
+ Atbash is an example of a
+ <i>
+  simple substitution
+ </i>
+ cipher. In this type of ciphers each letter of the message (or
+ <i>
+  plaintext
+ </i>
+ ) is mapped to 
+    a single correspinding letter of the ciphertext. in case of Atbash the plaintext alphabet is simply mapped to it's reverse, so that the first letter 
+    is replaced with the last, the second letter - with the second to last and so on. For example, the message "Hello, world!" is enciphered to "Swool, dliow!". 
+    The substitution table (for Latin alphabet) looks like this:
+ <pre>
+    Plaintext alphabet:  abcdefghijklmnopqrstuvwxyz
+    Ciphertext alphabet: zyxwvutsrqponmlkjihgfedcba
+</pre>
+ <p>
+  To decrypt a message, the same algorithm is applied to the ciphertext.
+ </p>
+ <p>
+  It's easy to see that Atbash provides virtually no information security. Anyone who intercepts the message encrypted with the Atbash cipher can easily 
+    decipher it by applying the same substitution table.
+ </p>
+ <p>
+  For this mission you need to write a function that encrypts given text with Atbash. Punctuation, whitespaces and other characters should remain unchanged.
+ </p>
+ <!-- Explain input and output values -->
+ <p>
+  <strong>
+   Input:
+  </strong>
+  plaintext: str
+ </p>
+ <p>
+  <strong>
+   Output:
+  </strong>
+  ciphertext: str
+ </p>
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+atbash('testing') == 'gvhgrmt'
+atbash('Hello, world!') == 'Svool, dliow!'
+</pre>
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/atbash-cipher">See the task on CheckiO</a></p>

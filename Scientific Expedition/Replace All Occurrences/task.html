@@ -1,0 +1,48 @@
+<!-- Describe task in general -->
+<img class="title_img" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/da43cf4d66bf4b509010ae9d2c1166dd/convert/grey/title.png"/>
+<p>
+    This function should take three strings as input: the main text, the target substring, and the replacement substring. It should return a new string where all occurrences of the target substring within the main text are replaced with the replacement substring.  
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/da43cf4d66bf4b509010ae9d2c1166dd/repl-all-occur.svg" style="max-height: 200px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Three strings <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> String <span translate="no">(str)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert replace_all(&quot;hello world&quot;, &quot;world&quot;, &quot;TypeScript&quot;) == &quot;hello TypeScript&quot;
+assert (
+    replace_all(&quot;hello world world&quot;, &quot;world&quot;, &quot;TypeScript&quot;)
+    == &quot;hello TypeScript TypeScript&quot;
+)
+assert replace_all(&quot;TypeScript is fun&quot;, &quot;fun&quot;, &quot;awesome&quot;) == &quot;TypeScript is awesome&quot;
+assert replace_all(&quot;aaa&quot;, &quot;a&quot;, &quot;b&quot;) == &quot;bbb&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<ul>
+<li><i>in text editors for find-and-replace functionality;</i></li>
+<li><i>in data transformation tools to standardize or clean data;</i></li>
+<li><i>in website template systems to replace placeholders with actual content.</i></li>
+</ul>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i>all inputs should be strings: mainText, target, replacement ∈ string;</i></li>
+<li><i>the target should not be an empty string: length(target) &gt; 0.</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/replace-all-occurrences">See the task on CheckiO</a></p>

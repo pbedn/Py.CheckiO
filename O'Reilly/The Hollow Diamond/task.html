@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+<p>
+    Your function should return a multiline string of unique lowercase letters in alphabetical order. The characters should be placed in a form of hollow rhombus (diamond), along its edges, starting from the top vertex.  
+</p>
+<p>
+    For this purpose you are given three values (for their constraints see Preconditions):
+    <ul>
+<li><b>side</b> - number of letters in each side of the rhombus;</li>
+<li><b>length</b> - total number of letters you should use;</li>
+<li><b>cw</b> - clockwise flag, which shows in what direction the letters must go (if <b>True</b> - letters should be placed in clockwise direction).</li>
+</ul>
+</p>
+<p>
+    If it's not enough <b>length</b> to complete the form, complement it with <b>"*"</b>. The rhombus should not have white spaces at the right. Here is an example with arguments and expected result:
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/ef48278a60a0413b8c91c8a426094533/diamond.png" style="max-height: 200px" title="example"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> Three arguments: side as integer (int), length as integer (int) and clockwise flag as logic (bool).
+</p>
+<p>
+<strong>Output:</strong> Multiline string <span translate="no">(str)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert hollow_diamond(3, 8, True) == &quot;  a\n h b\ng   c\n f d\n  e&quot;
+assert hollow_diamond(3, 6, False) == &quot;  a\n b *\nc   *\n d f\n  e&quot;
+assert (
+    hollow_diamond(4, 10, False) == &quot;   a\n  b *\n c   *\nd     j\n e   i\n  f h\n   g&quot;
+)
+assert (
+    hollow_diamond(5, 16, True)
+    == &quot;    a\n   p b\n  o   c\n n     d\nm       e\n l     f\n  k   g\n   j h\n    i&quot;
+)
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Preconditions:</strong>
+<ul>
+<li><i>26 &gt;= length &gt;= 0;</i></li>
+<li><i>side &gt; 1;</i></li>
+<li><i>(side-1)*4 &gt;= length.</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/the-hollow-diamond">See the task on CheckiO</a></p>

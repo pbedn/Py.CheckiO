@@ -1,0 +1,61 @@
+<!-- Describe task in general -->
+<p style="float: left; margin: 10px;">
+<a href="https://www.vecteezy.com/free-vector/calculator"><img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/edb3b9b8e33a4a998c47817ea1ee1513/calc.png" style="max-height: 200px" title="example"/></a>
+</p>
+<p>
+<i>The first known tools used to aid arithmetic calculations were: bones (used to tally items), pebbles, and counting boards, and the abacus, known to have been used by Sumerians and Egyptians before 2000 BC. Except for the Antikythera mechanism (an "out of the time" astronomical device), development of computing tools arrived near the start of the 17th century: the geometric-military compass (by Galileo), logarithms and Napier bones (by Napier), and the slide rule (by Edmund Gunter). <a href="https://en.wikipedia.org/wiki/Calculator" target="_blank">Find more on wikipedia page...</a></i>
+</p>
+<p>
+    In this series of missions you are going to build an elementary calculator.
+</p>
+<p>
+    As an input, you get a sequence of keys pressed, and, as the result of that function, you should show what will be shown on the screen when the last key is pressed. Be attentive, it's not always the result of the expression. Actually, playing with the physical calculator or app will really helps you to catch edge cases.
+</p>
+<p>
+    In the forth mission float numbers are allowed. The "." takes space as one digit, so max digit space is 4 for float number results. It means that the maximum float number you can enter is "9999.".
+</p>
+<p>
+<strong>Expected behavior:</strong>
+<ul>
+<li><i>beginning zeros should be removed, only-zeros number - converted to single zero;</i></li>
+<li><i>among +- signs between numbers, the last one should be taken;</i></li>
+<li><i>"==" means repeating the last operation;</i></li>
+<li><i>"+=" or "-=" - adding/subtracting the number (or operations result) before the combination (doubling the number/subtracting itself);</i></li>
+<li><i>the calculator ignores digit you enter after 5th;</i></li>
+<li><i>"-" for numbers &lt; 0 is NOT taking digit place;</i></li>
+<li><i>if the abs(result) is more than 99999 - "error" is shown as a result;</i></li>
+<li><i>for float, if the integer part of abs(result) is more then 9999 - "error" is shown as a result;</i></li>
+<li><i>for float, in case the total length of number is more than 5 digits, it should be rounded to 5 digits (1.23456 -&gt; 1.235);</i></li>
+<li><i>for float, beginning and trailing zeros should be removed (until the "." if possible): 0.1200 -&gt; .12 ,  123.00 -&gt; 123. . It should be done after the rounding: 1.000123 -&gt; 1. . Stripping of trailing zeros should only be done after entering a number has concluded (non-digit character pressed).</i></li>
+</ul>
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String.
+</p>
+<p>
+<strong>Output:</strong> String.
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert calculator(&quot;0001.1000&quot;) == &quot;1.100&quot;
+assert calculator(&quot;0001.1000-&quot;) == &quot;1.1&quot;
+assert calculator(&quot;999.9999999+=&quot;) == &quot;2000.&quot;
+assert calculator(&quot;1.000123&quot;) == &quot;1.000&quot;
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<p class="for_info_only">
+<strong>How it’s used:</strong>
+<i>Calculators are widely used. Understanding the principles of its input and output are interesting and useful.</i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<i>Allowed characters: digits (0-9), dot (.), signs plus (+), minus (-) or equation (=) and their combinations (+=, +-, == etc.). The integer number may contain no more than 5 digits, float - 4.</i>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/calculator-iv">See the task on CheckiO</a></p>

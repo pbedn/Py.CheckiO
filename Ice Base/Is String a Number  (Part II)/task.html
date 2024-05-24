@@ -1,0 +1,28 @@
+<!-- Describe task in general -->
+<p>
+    You are given a string. Your function should return <b class="code">True</b> if the string is a valid number (contains only digits and "+-." at proper places), otherwise - <b class="code">False</b>. Look at the mask:
+</p>
+<pre>
+[+- ][zero or more digits][.][zero or more digits]
+</pre>
+<p>
+    Of course, not all parts are necessary (but at least one digit part is!). For example, "+10." or "-.55" are valid numbers, where part equal 0 is omitted.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> A string <span translate="no">(str)</span>.
+</p>
+<p>
+<strong>Output:</strong> Logic value <span translate="no">(bool)</span>. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert is_number(&quot;34&quot;) == True
+assert is_number(&quot;df&quot;) == False
+assert is_number(&quot;&quot;) == False
+assert is_number(&quot;+10.0&quot;) == True
+</pre>
+
+
+<p><a href="https://py.checkio.org/en/mission/is-string-a-number-part-ii">See the task on CheckiO</a></p>

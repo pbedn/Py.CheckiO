@@ -1,0 +1,58 @@
+<!-- Describe task in general -->
+<p style="text-align: justify;">
+    You are given an unsorted string of unique (ignoring case) lower- and/or uppercase letters. Represent it as a correct mask for the square-arranged letters of the alphabet from "a" to "y" (row-major order). The mask must be a 5x5 matrix of integers as tuple of tuples with the following rule.
+    <ul>
+<li>character is not present in the string - use <code>0</code> in mask;</li>
+<li>character is lowercase - use <code>1</code>;</li>
+<li>character is uppercase - use <code>2</code>.</li>
+</ul>
+</p>
+<p style="text-align: center;">
+<img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/5c2bca694fb6440495b2bca8c71b32e2/string-2-matrix.svg" style="max-height: 250px" title="example"/>
+</p>
+<p style="text-align: justify;">
+    Here is a mission to make a reversed conversion - <a href="https://py.checkio.org/en/mission/matrix-2-string/" target="_blank">Matrix-2-String</a>.
+</p>
+<!-- Explain input and output values -->
+<p>
+<strong>Input:</strong> String (<span translate="no">str</span>).
+</p>
+<p>
+<strong>Output:</strong> Tuple of five tuples of five integers (<span translate="no">int</span>) each. 
+</p>
+<p>
+<strong>Examples:</strong>
+</p>
+<pre class="brush: python">assert converter(&quot;sMcigkqow&quot;) == (
+    (0, 0, 1, 0, 0),
+    (0, 1, 0, 1, 0),
+    (1, 0, 2, 0, 1),
+    (0, 1, 0, 1, 0),
+    (0, 0, 1, 0, 0),
+)
+assert converter(&quot;acSyIwoQkumGe&quot;) == (
+    (1, 0, 1, 0, 1),
+    (0, 2, 0, 2, 0),
+    (1, 0, 1, 0, 1),
+    (0, 2, 0, 2, 0),
+    (1, 0, 1, 0, 1),
+)
+</pre>
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+<strong>Precondition:</strong>
+<ul>
+<li><i>no "z" in string.</i></li>
+</ul>
+</p>
+
+
+<p><a href="https://py.checkio.org/en/mission/string-2-matrix">See the task on CheckiO</a></p>
